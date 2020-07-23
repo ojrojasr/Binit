@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Binit Ignite">
+    <meta name="author" content="Binit">
+    <title>@ViewData["Title"] - WebApp</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/icon/mini.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/lib/prism/prism.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+    <!-- Error pages -->
+    <link href="~/css/error-pages.css" rel="stylesheet">
+
+    <!-- Floating Labels -->
+    <link href="~/css/floating-label.css" rel="stylesheet">
+    
+    <!-- You can change the theme colors from here -->
+    <link href="~/css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101608081-3"></script>
+    <script>
+        var analyiticsId = 'UA-101608081-3';
+        if (analyiticsId == 'UA-101608081-3' || !analyiticsId) {
+            console.error('The AnalyticsID is provided by the template, please change it.')
+        }
+        else {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', analyiticsId);
+        }
+    </script>
+    @Html.Raw(JavaScriptSnippet.FullScript)
+</head>
+<body class="external">
+    <!-- Page wrapper  -->
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page wrapper  -->  
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+	<script src="~/lib/jquery-cookie/jquery.cookie.js"></script>
+    <script src="~/lib/popper/popper.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+	<script src="~/lib/autosize/autosize.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/custom.js"></script>
+    <script src="~/js/sidebarmenu.js"></script>
+    <script src="~/js/waves.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿@page
+@model TwoFactorAuthenticationModel
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@{
+    ViewData["Title"] = localizer[Lang.Title];
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+    Layout = "/Areas/Identity/Pages/Account/Manage/_Layout.cshtml";
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h4>@ViewData["Title"]</h4>
+@if (Model.Is2faEnabled)
+{
+    if (Model.RecoveryCodesLeft == 0)
+    {
+        <div class="alert alert-danger">
+            <strong>@localizer[Lang.NoRecoveryCodesLeft]</strong>
+            <p>@localizer[Lang.NoRecoveryCodesLeftDescription] <a asp-page="./GenerateRecoveryCodes">@localizer[Lang.RecoveryCodesLeftButton]</a></p>
+        </div>
+    }
+    else if (Model.RecoveryCodesLeft == 1)
+    {
+        <div class="alert alert-danger">
+            <strong>@localizer[Lang.OneRecoveryCodeLeft]</strong>
+            <p>You can <a asp-page="./GenerateRecoveryCodes">@localizer[Lang.RecoveryCodesLeftButton]</a>.</p>
+        </div>
+    }
+    else if (Model.RecoveryCodesLeft <= 3)
+    {
+        <div class="alert alert-warning">
+            <strong>@string.Format(localizer[Lang.RecoveryCodesLeft], @Model.RecoveryCodesLeft)</strong>
+            <p>@localizer[Lang.RecoveryCodesLeftDescription] <a asp-page="./GenerateRecoveryCodes">@localizer[Lang.RecoveryCodesLeftButton]</a>.</p>
+        </div>
+    }
+
+    if (Model.IsMachineRemembered)
+    {
+        <form method="post" style="display: inline-block">
+            <button type="submit" class="btn btn-primary">@localizer[Lang.ForgetBrowser]</button>
+        </form>
+    }
+    <a asp-page="./Disable2fa" class="btn btn-primary">@localizer[Lang.DisableTwoFA]</a>
+    <a asp-page="./GenerateRecoveryCodes" class="btn btn-primary">@localizer[Lang.ResetRecoveryCodes]</a>
+}
+
+<h5>@localizer[Lang.SecondSubtitle]</h5>
+@if (!Model.HasAuthenticator)
+{
+    <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">@localizer[Lang.AddApp]</a>
+}
+else
+{
+    <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">@localizer[Lang.SetupApp]</a>
+    <a id="reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-primary">@localizer[Lang.ResetApp]</a>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

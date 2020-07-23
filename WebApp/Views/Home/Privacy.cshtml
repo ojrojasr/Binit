@@ -1,0 +1,9 @@
+﻿@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Home.Privacy
+@inject IStringLocalizer<SharedResources> localizer
+
+<h1>@ViewData["Title"]</h1>
+
+<p>@localizer[Lang.Detail]</p>

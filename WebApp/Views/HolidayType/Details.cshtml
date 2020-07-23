@@ -1,0 +1,13 @@
+@model WebApp.Models.HolidayTypeViewModel;
+
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.HolidayType.Details;
+@inject IStringLocalizer<SharedResources> localizer
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-textarea for-property="Description" disabled></ignite-textarea>
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","HolidayType")'">@(localizer[Lang.BtnBack])</button>

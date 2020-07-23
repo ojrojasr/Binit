@@ -1,0 +1,36 @@
+@using Microsoft.Extensions.Localization
+@using Binit.Framework
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Charts.Index
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var basicLabels = ViewData["basicLabels"];
+    var basicValues = ViewData["basicValues"];
+
+    // Radar chart
+    var radarLabels = ViewData["radarLabels"];
+    var radarDatasets = ViewData["radarDatasets"];
+}
+
+<div class="row">
+    <div class="col">
+        <canvas class="ignite-chart line-chart" data-title="@localizer[Lang.LineChartTitle]" data-labels="@basicLabels" data-values="@basicValues"></canvas>
+    </div>
+    <div class="col">
+        <canvas class="ignite-chart bar-chart" data-title="@localizer[Lang.BarChartTitle]" data-labels="@basicLabels" data-values="@basicValues"></canvas>
+    </div>
+    <div class="w-100 mb-5"></div>
+    <div class="col">
+        <canvas class="ignite-chart pie-chart" data-title="@localizer[Lang.PieChartTitle]" data-labels="@basicLabels" data-values="@basicValues"></canvas>
+    </div>
+    <div class="col">
+        <canvas class="ignite-chart doughnut-chart" data-title="@localizer[Lang.DoughnutChartTitle]" data-labels="@basicLabels" data-values="@basicValues"></canvas>
+    </div>
+    <div class="w-100 mb-5"></div>
+    <div class="col">
+        <canvas class="ignite-chart polar-chart" data-title="@localizer[Lang.PolarChartTitle]" data-labels="@basicLabels" data-values="@basicValues"></canvas>
+    </div>
+    <div class="col">
+        <canvas class="ignite-chart radar-chart" data-title="@localizer[Lang.RadarChartTitle]" data-labels="@radarLabels" data-values="@radarDatasets"></canvas>
+    </div>
+</div>

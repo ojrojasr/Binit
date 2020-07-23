@@ -1,0 +1,44 @@
+@model WebApp.Models.QuestionViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Game.Play
+@inject IStringLocalizer<SharedResources> localizer
+
+<div class="text-center" style=" background-color: @Model.Color; border-radius: 10px 10px; paddin: 10px;">
+
+    <h3 style="color:white" for-property="Name"> @Model.Name</h3>
+</div>
+
+<div>
+
+    <div>
+        <br />
+        @{
+            
+            foreach (var answer in Model.Answers)
+            {
+                <div class="text-center">
+                    <button id="button" class="col-md-4 btn btn-light answer_btn" style="border-color: @Model.Color" name="@answer.Id">
+                        @answer.Name
+                    </button>
+                </div>
+                <br />
+            }
+        }
+
+        <div class="text-right">
+            <button id="next" style="display: none; border-color:@Model.Color" class="col-md-2 btn btn-light"
+                    onclick="window.location.href='@Url.Action("Play","Game")'">
+                @(localizer[Lang.Next])
+            </button>
+        </div>
+    </div>
+
+
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/js/views/play/checkAnswer.js")" type="text/javascript"></script>
+}

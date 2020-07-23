@@ -1,0 +1,21 @@
+@using Domain.Entities.Model
+@inject Domain.Logic.Interfaces.IAccountService accountService;
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.ManageNav
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@inject Binit.Framework.Interfaces.Configuration.IRealmConfiguration realmConfiguration;
+@{
+    var hasExternalLogins = (await accountService.GetExternalAuthenticationSchemes()).Any();
+}
+<div class="vtabs customvtab w-100">
+    <ul class="nav nav-tabs tabs-vertical" role="tablist">
+        <li class="nav-item"><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">@localizer[Lang.Profile]</a></li>
+        <li class="nav-item"><a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">@localizer[Lang.ChangePassword]</a></li>
+        @if (hasExternalLogins)
+        {
+            <li id="external-logins" class="nav-item"><a id="external-login" class="nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-page="./ExternalLogins">@localizer[Lang.ExternalLogin]</a></li>
+        }
+		@if(realmConfiguration.Allow2FA) {
+        	<li class="nav-item"><a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">@localizer[Lang.TwoFA]</a></li>
+		}
+    </ul>
+</div>

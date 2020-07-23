@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon name="arrow-back" class="arrow-back" (click)="goBack()"></ion-icon>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>{{ "PRODUCTS_PAGE.PRODUCTS" | translate }}</ion-title>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="refresheable">
+
+  <refresher [awaitFor]="products$"></refresher>
+
+  <div *ngIf="products$ | async as products; else spinner">
+    <ion-title>Open passing the object</ion-title>
+    <ion-list>
+      <ion-item *ngFor="let product of products">
+        <ion-label (click)="seeDetail(product)">{{ product.name }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-title>Open passing only the id</ion-title>
+    <ion-list>
+      <ion-item *ngFor="let product of products">
+        <ion-label (click)="seeDetailAsync(product.id)">{{ product.name }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ng-template #spinner>
+    <div class="horizontal-centering">
+      <ion-spinner></ion-spinner>
+    </div>
+  </ng-template>
+
+</ion-content>

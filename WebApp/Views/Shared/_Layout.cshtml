@@ -1,0 +1,144 @@
+﻿@inject Binit.Framework.Interfaces.Configuration.IGoogleMapsConfiguration googleMapsConfiguration
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Binit Ignite">
+    <meta name="author" content="Binit">
+    <title>@ViewData["Title"] - WebApp</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/icon/mini.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/lib/prism/prism.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="~/lib/datatables/datatables.min.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link href="~/lib/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!-- Select2 Picker -->
+    <link href="~/lib/select2/select2.min.css" rel="stylesheet">
+	
+	<!-- Dropzone -->
+    <link href="~/lib/dropzone/dropzone.css" rel="stylesheet">
+
+    <!-- Date Picker -->
+    <link href="~/lib/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+
+    <!-- Floating Labels -->
+    <link href="~/css/floating-label.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+    <!-- Add your App's CSS customizations here -->
+    <link href="~/css/app.css" rel="stylesheet">
+
+    <!-- You can change the theme colors from here -->
+    <link href="~/css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101608081-3"></script>
+    <script>
+        var analyiticsId = 'UA-101608081-3';
+        if (analyiticsId == 'UA-101608081-3' || !analyiticsId) {
+            console.error('The AnalyticsID is provided by the template, please change it.')
+        }
+        else {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', analyiticsId);
+        }
+    </script>
+    @Html.Raw(JavaScriptSnippet.FullScript)
+
+</head>
+<body class="fix-header fix-sidebar">
+    
+    @{await Html.RenderPartialAsync("_Spinner"); }
+    @{await Html.RenderPartialAsync("_Navbar"); }
+    @{await Html.RenderPartialAsync("_Sidebar"); }
+
+    <!-- Page wrapper  -->
+    <div class="page-wrapper">
+        <div class="container-fluid">
+			@{await Html.RenderPartialAsync("_PageTitle"); }
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page wrapper  -->  
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery-cookie/jquery.cookie.js"></script>
+    <script src="~/lib/popper/popper.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/lib/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="~/lib/chartjs/Chart.min.js"></script>
+    <script src="~/lib/dropzone/dropzone.js"></script>
+    <script src="~/lib/autosize/autosize.min.js"></script>
+	@{
+		var apiKey = googleMapsConfiguration.ApiKey;
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=@apiKey&libraries=places"></script>
+	}
+    <!-- Datatables -->
+    <script src="~/lib/datatables/datatables.min.js"></script>
+    <script src="~/lib/datatables/datatables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="~/lib/sweetalert/sweetalert.min.js"></script>
+    <script src="~/lib/sweetalert/jquery.sweet-alert.custom.js"></script>
+
+    <!-- Select2 Picker -->
+    <script src="~/lib/select2/select2.full.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <!-- Add your App's JS customizations here -->
+    <script src="~/js/app.js" asp-append-version="true"></script>
+    
+    <script src="~/js/custom.js"></script>
+    <script src="~/js/sidebarmenu.js"></script>
+    <script src="~/js/waves.js"></script>
+    <script src="~/js/datatable.js"></script>
+    <script src="~/js/charts.js"></script>
+    <script src="~/js/dropzone.js"></script>
+    <script src="~/js/maps.autocomplete.js"></script>
+	<script>
+		$(function() {
+			DropzoneFileManagerInit();
+            DropzoneExcelImportInit();
+		})
+	</script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

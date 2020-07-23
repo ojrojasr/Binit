@@ -1,0 +1,417 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.left-sidebar {
+  background-color: #242a33;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+}
+body.external {
+  margin-bottom: 0px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+table.details tbody tr td {
+  border: none;
+}
+table.details tbody tr td .form-group {
+  margin-bottom: 0;
+}
+
+.floating-labels .d-flex label {
+	position: initial;
+	margin-bottom: 0;
+}
+
+/* External Login */
+#external-login-container .text-info {
+	margin-bottom: 32px;
+}
+#external-login-container.login-register {
+	overflow: auto;
+	padding: 5% 0;
+}
+
+.row-child-container {
+	margin-bottom: 10px;
+}
+
+.row-child-container p {
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+
+table tr td.child {
+	background-color: white !important;
+}
+
+table .row-child-container.d-flex {
+	display: flex !important;
+}
+
+@media screen and (max-width: 767px) {
+	div.dataTables_wrapper div.dataTables_info {
+		text-align: left;
+		white-space: normal;
+	}
+}
+
+.sidebar-nav {
+	height: 100%;
+	display: flex !important;
+}
+
+.sidebarnav.top {
+	overflow: auto;
+}
+
+.sidebarnav.bottom {
+	overflow: inherit;
+}
+
+nav.sidebar-nav .sidebarnav.bottom li {
+	display: flex !important;
+}
+
+.sidebarnav.bottom ul {
+	border-top: #8d97ad thin solid;
+}
+
+.mini-sidebar .scroll-sidebar {
+	height: -webkit-calc(100% - 70px);
+	height: -moz-calc(100% - 70px);
+	height: calc(100% - 70px);
+}
+
+.mini-sidebar .sidebar-nav .sidebarnav.bottom > li > ul {
+	bottom: 47px;
+	top: unset;
+}
+
+
+/* Styles for expand/collapse toggle in datatables */
+table.dtr-inline tr td.flex i {
+	display: none;
+}
+
+/* Toggle expand/collapse display based on table state */
+table.dtr-inline.collapsed tr.parent td.flex i.fa-minus {
+	display: block;
+}
+table.dtr-inline.collapsed tr td.flex i.fa-plus {
+	display: block;
+}
+table.dtr-inline.collapsed tr.parent td.flex i.fa-plus {
+	display: none;
+}
+
+table.dtr-inline.collapsed tr {
+	cursor: pointer;
+}
+
+table tr td.flex {
+	display: flex !important;
+	align-items: center;
+}
+
+/* Badge shared styles */
+table tr td.flex i {
+	margin-right: 10px;
+	color: white;
+	padding: 5px;
+	border-radius: 50%;
+}
+
+table tr td.flex i.fa-plus {
+	background-color: #24d2b5;
+}
+
+table tr td.flex i.fa-minus {
+	background-color: #ff5c6c;
+}
+
+table .row-child-container .wrap {
+	white-space: normal;
+    word-break: break-all;
+}
+
+.datatable-row-actions {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.datatable-row-actions button{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* End Styles for expand/collapse toggle in datatables */
+
+/* Styles for list of values in datatables */
+table .list .list-item {
+	padding: 3px 6px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	border-radius: 5px;
+	font-weight: 400;
+}
+table .list .list-item.additional, table .list .list-item i {
+	font-weight: 600;
+}
+table .list.d-flex {
+	display: flex !important;
+	flex-wrap: wrap !important;
+}
+
+table .list .list-item.Gray
+{
+	background-color: #e2e8f0;
+	color: #1a202c;
+}
+table .list .list-item.Red
+{
+	background-color: #feb2b2;
+	color: #742a2a;
+}
+table .list .list-item.Orange
+{
+	background-color: #fbd38d;
+	color: #7b341e;
+}
+table .list .list-item.Yellow
+{
+	background-color: #faf089;
+	color: #744210;
+}
+table .list .list-item.Green
+{
+	background-color: #9ae6b4;
+	color: #22543d;
+}
+table .list .list-item.Teal
+{
+	background-color: #81e6d9;
+	color: #234e52;
+}
+table .list .list-item.Blue
+{
+	background-color: #90cdf4;
+	color: #2a4365;
+}
+table .list .list-item.Indigo
+{
+	background-color: #a3bffa;
+	color: #3c366b;
+}
+table .list .list-item.Purple
+{
+	background-color: #d6bcfa;
+	color: #44337a;
+}
+table .list .list-item.Pink
+{
+	background-color: #fbb6ce;
+	color: #702459;
+}
+/* End Styles for list of values in datatables */
+
+/* Styles for login */
+#login {
+	display: flex !important;
+}
+
+#login img.bg {
+	display: none;
+}
+
+#login .card-body {
+	background-color: white;
+}
+
+@media(min-width: 1024px) {
+	#login img.bg {
+		display: block;
+		width: 66%;
+	}
+}
+
+@media(min-width: 764px) and (max-width: 1023px) {
+	#login .card-body {
+		flex: none
+	}
+	#login {
+		justify-content: center !important;
+		background-image: url('/images/bg-login.jpg');
+		background-size: cover;
+	}
+	#login .card-body {
+		width: 50%;
+	}
+}
+/* End Styles for login */
+
+.footer {
+	line-height: initial;
+}
+
+table tr .actions {
+	vertical-align: middle;
+}
+
+.topbar .top-navbar .navbar-header .navbar-brand {
+	padding-top: 1px;
+}
+
+/* Remove file styles */
+.existing-file div:first-child {
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+
+.existing-file p {
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 16px;
+}
+
+.remove-file-btn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: #ff5c6c;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	padding: 4px 8px;
+	cursor: pointer;
+}
+/* End Remove file styles */
+.account-dropdown-footer {
+	padding: 8px;
+	font-size: 12px;
+	margin-bottom: 0px;
+}
+
+@media(max-width: 767px){
+	.mini-sidebar .scroll-sidebar {
+		height: 100%;
+	}
+	.mini-sidebar.show-sidebar .top-navbar .navbar-header {
+		width: 260px;
+	}
+}
+
+form.floating-labels{
+	padding-top: 30px;
+}
+
+/* Ignite Address Styles */
+.ignite-address .map{
+	min-height: 250px;
+}
+.ignite-address .input-group{
+	margin-bottom: 12px;
+}
+.ignite-address .input-group .input-group-append{
+	cursor: pointer;
+}
+.ignite-address .input-group i{
+	margin-right: 8px;
+}
+.ignite-address .input-group span{
+	font-size: 12px;
+}
+.ignite-address .address-components-container {
+	padding: 12px;
+	background-color: #F6F9FA;
+}
+.ignite-address .address-components{
+	padding: 12px;
+	background-color: white;
+}
+.ignite-address .address-components p{
+	margin-bottom: 0px;
+	font-weight: 700;
+}
+.ignite-address .address-components p span{
+	margin-left: 12px;
+	font-weight: normal;
+}
+.ignite-address .address-components .component{
+	margin-bottom: 8px;
+	display: flex;
+}
+.ignite-address .address-components .component label{
+	margin-right: 8px;
+}
+.ignite-address .address-components .component input{
+	border: none;
+	border-bottom: #BCC2CF thin solid;
+	flex-grow: 1;
+}
+.ignite-address .address-components .component input:read-only{
+	border: none;
+	background-color: #F6F9FA;
+}
+.ignite-address .address-components .component{
+	margin-bottom: 8px;
+	margin-right: 8px;
+}
+/* End Ignite Address Styles */
+.btn.btn-primary.excel {
+	background-color: #21a366;
+	border-color:#21a366;
+}

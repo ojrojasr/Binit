@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{ "HOME_PAGE.HOME" | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="https://pluma.binit.cloud/assets/Binit/images/logos/logo.png"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>BINIT SRL</ion-card-subtitle>
+        <ion-card-title>BINIT-Ignite</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ "HOME_PAGE.IGNITE_DESCRIPTION" | translate }}</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-title>Call's to action</ion-title>
+        <ion-button (click)="callTo('see-products')">See products</ion-button>
+        <ion-button (click)="callTo('see-new-product')">See new product</ion-button>
+        <ion-button (click)="callTo('see-some-product')">See some product</ion-button>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

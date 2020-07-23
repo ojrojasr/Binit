@@ -1,0 +1,74 @@
+<li class="d-flex @(Direction == "bottom-up" ? "flex-column-reverse" : "flex-column")">
+    @if(Childs != null && Childs.Any()) 
+	{
+        <a class="has-arrow waves-effect waves-dark" href="@Link" target="@(External ? "_blank" : "_self")" aria-expanded="false">
+            <i class="@Icon"></i>
+            <span class="hide-menu">@Title</span>
+        </a>
+        <ul aria-expanded="false" class="collapse">
+            @for(var i = 0; i < Childs.Count; i++)
+            {
+                var child = Childs[i];
+                if(child.Childs != null && child.Childs.Any()) {
+                    <li>
+                        <a class="has-arrow waves-effect waves-dark" href="@child.Link" target="@(child.External ? "_blank" : "_self")" aria-expanded="false">
+                            @child.Title
+                        </a>
+                        <ul aria-expanded="false" class="collapse">
+                            @for(var j = 0; j < child.Childs.Count ; j++)
+                            {
+                                var subChild = child.Childs[j];
+                                <li><a href="@subChild.Link" target="@(subChild.External ? "_blank" : "_self")">@subChild.Title</a></li>
+                            }
+                        </ul>
+                    </li>
+                } else {
+                    <li><a class="waves-effect waves-dark" target="@(child.External ? "_blank" : "_self")" href="@child.Link">@child.Title</a></li>
+                }
+            }
+        </ul>
+    } else {
+        <a href="@Link" aria-expanded="false">
+            <i class="@Icon"></i>
+            <span class="hide-menu">@Title</span>
+        </a>
+    }
+</li>
+
+@code {
+    [Parameter] 
+    public string Title { get; set; }
+
+    [Parameter] 
+    public string Link { get; set; }
+
+    [Parameter] 
+    public bool External { get; set; } = false;
+
+	[Parameter]
+	public string Direction { get; set; } = "top-down";
+    
+    [Parameter] 
+    public string Icon { get; set; } = "icon-Arrow-RightinCircle";
+
+    [Parameter] 
+    public List<SidenavItem> Childs { get; set; }
+
+	[Parameter]
+	public bool Visible { get; set; } = true;
+
+	public SidenavItem(string title, string icon, string link, bool visible = true, List<SidenavItem> childs = null, string direction = "top-down")
+	{
+		this.Title = title;
+		this.Icon = icon;
+		this.Link = link;
+		this.Visible = visible;
+		this.Childs = childs;
+		this.Direction = direction;
+	}
+
+	public SidenavItem()
+	{
+		
+	}
+}

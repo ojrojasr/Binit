@@ -1,0 +1,28 @@
+@model WebApp.Models.EventViewModel;
+@using WebApp.WebTools;
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Event.Details;
+@inject IStringLocalizer<SharedResources> localizer
+
+<div class="form-group">
+    <label asp-for="Files"></label>
+    @{
+		@await Html.PartialAsync("_FileManager", Model.Files, 
+			new FileManagerOptions(ViewData, localizer) { 
+				UploadEnabled = false,
+				AllowRemoveFiles = false
+			}
+		);
+	}
+</div>
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-textarea for-property="Description" disabled></ignite-textarea>
+<ignite-input for-property="Duration" disabled></ignite-input>
+<ignite-date-picker for-property="Date" disabled></ignite-date-picker>
+<ignite-address for-property="Location" disabled></ignite-address>
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","Event")'">@(localizer[Lang.BtnBack])</button>

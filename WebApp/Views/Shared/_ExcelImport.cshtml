@@ -1,0 +1,45 @@
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Shared._ExcelImport
+@using WebApp.WebTools
+
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+
+@{
+	var excelImportOptions = new ExcelImportOptions(ViewData, localizer);
+}
+
+<button type="button" class="btn btn-primary excel" data-toggle="modal" data-target="#importModal">
+	<i class="fa fa-file-excel m-r-5"></i>@(localizer[Lang.BtnImport])
+</button>
+
+<div class="modal" id="importModal" tabindex="-1" role="dialog" aria-labelledby="importModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="importModalLabel">@(localizer[Lang.Title])</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+					<form class="excel-import-dropzone dropzone" 
+						data-max-file-size="@excelImportOptions.MaxFileSize"
+						data-upload-url="@excelImportOptions.ActionUrl"
+						data-accepted-mime-types="@excelImportOptions.AcceptedMimeTypes"
+						data-dict-default-message="@excelImportOptions.Messages["DictDefaultMessage"]"
+						data-dict-cancel-upload="@excelImportOptions.Messages["DictCancelUpload"]"
+						data-dict-upload-canceled="@excelImportOptions.Messages["DictUploadCanceled"]"
+						data-dict-cancel-upload-confirmation="@excelImportOptions.Messages["DictCancelUploadConfirmation"]"
+						data-dict-remove-file="@excelImportOptions.Messages["DictRemoveFile"]"
+						data-dict-max-files-exceeded="@excelImportOptions.Messages["DictMaxFilesExceeded"]"
+						data-dict-invalid-file-type="@excelImportOptions.Messages["DictInvalidFileType"]"
+						data-dict-file-too-big="@excelImportOptions.Messages["DictFileTooBig"]"
+						data-dict-import-succeeded-title="@excelImportOptions.Messages["DictImportSucceededTitle"]"
+						data-dict-import-succeeded-message="@excelImportOptions.Messages["DictImportSucceededMessage"]"
+						data-dict-import-failed-title="@excelImportOptions.Messages["DictImportFailedTitle"]">
+					</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">@(localizer[Lang.BtnClose])</button>
+			</div>
+		</div>
+	</div>
+</div>
+

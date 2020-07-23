@@ -1,0 +1,50 @@
+@model WebApp.Models.FrontUserViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.FrontUser.CreateOrEdit
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var action = ViewData["Action"] as string;
+    var submitLabel = action == "CreateFront" ? localizer[Lang.BtnCreate] : localizer[Lang.BtnUpdate];
+    var roles = ViewData["Roles"] as List<SelectListItem>;
+    var tenants = ViewData["Tenants"] as List<SelectListItem>;
+}
+
+<form class="floating-labels" method="POST" action="@Url.Action(action,"FrontUser")">
+    <input type="hidden" asp-for="Id"/>
+    <input type="hidden" asp-for="UserType"/>
+
+    <ignite-input for-property="Name"></ignite-input>
+	<ignite-input for-property="LastName"></ignite-input>
+	<ignite-date-picker for-property="Birthdate"></ignite-date-picker>
+    
+	@if (action == "CreateFront")
+	{
+	    <ignite-input for-property="Email"></ignite-input>
+	} 
+	else 
+	{
+	    <ignite-input for-property="Email" disabled></ignite-input>
+	}
+
+    <ignite-input for-property="PhoneNumber"></ignite-input>             
+    <ignite-dropdown 
+		for-property="Roles"
+		items="@roles"
+		multiple="true">
+	</ignite-dropdown>
+	<ignite-dropdown 
+		for-property="TenantId"
+		items="@tenants"
+		placeholder="@localizer[Lang.PlaceholderSelectTenant]">
+	</ignite-dropdown>
+
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mr-2"
+        onclick="window.location.href='@Url.Action("Index","FrontUser")'">@(localizer[Lang.BtnCancel])</button>
+        <button type="submit" class="btn btn-themecolor">@submitLabel</button>
+    </div>
+</form>

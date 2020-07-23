@@ -1,0 +1,18 @@
+﻿@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Home.Index
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@inject IStringLocalizer<SharedResources> localizer
+
+
+
+<h1 class="text-center ">@(localizer[Lang.Title])</h1>
+<br />
+<div class="col-md-12">
+    <button class="mx-auto col-md-6 rainbow-button btn" alt="@(localizer[Lang.Play])"
+            onclick="window.location.href='@Url.Action("Index","Game")'">
+    </button>
+</div>
+
+
+<link href="~/css/colors/rainbow.css" rel="stylesheet" />

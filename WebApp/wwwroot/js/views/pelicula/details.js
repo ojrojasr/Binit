@@ -1,0 +1,1 @@
+$("#editors").select2();

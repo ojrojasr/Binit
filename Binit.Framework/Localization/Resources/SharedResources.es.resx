@@ -1,0 +1,3142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!--
+      Microsoft ResX Schema
+
+      Version 2.0
+
+      The primary goals of this format is to allow a simple XML format
+      that is mostly human readable. The generation and parsing of the
+      various data types are done through the TypeConverter classes
+      associated with the data types.
+
+      Example:
+
+      ... ado.net/XML headers & schema ...
+      <resheader name="resmimetype">text/microsoft-resx</resheader>
+      <resheader name="version">2.0</resheader>
+      <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+      <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+      <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+      <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+      <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+          <value>[base64 mime encoded serialized .NET Framework object]</value>
+      </data>
+      <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+          <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+          <comment>This is a comment</comment>
+      </data>
+
+      There are any number of "resheader" rows that contain simple
+      name/value pairs.
+
+      Each data row contains a name, and value. The row also contains a
+      type or mimetype. Type corresponds to a .NET class that support
+      text/value conversion through the TypeConverter architecture.
+      Classes that don't support this are serialized and stored with the
+      mimetype set.
+
+      The mimetype is used for serialized objects, and tells the
+      ResXResourceReader how to depersist the object. This is currently not
+      extensible. For a given mimetype the value must be set accordingly:
+
+      Note - application/x-microsoft.net.object.binary.base64 is the format
+      that the ResXResourceWriter will generate, however the reader can
+      read any of the formats listed below.
+
+      mimetype: application/x-microsoft.net.object.binary.base64
+      value   : The object must be serialized with
+              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+              : and then encoded with base64 encoding.
+
+      mimetype: application/x-microsoft.net.object.soap.base64
+      value   : The object must be serialized with
+              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+              : and then encoded with base64 encoding.
+
+      mimetype: application/x-microsoft.net.object.bytearray.base64
+      value   : The object must be serialized into a byte array
+              : using a System.ComponentModel.TypeConverter
+              : and then encoded with base64 encoding.
+      -->
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <!-- Exceptions -->
+    <!-- DAL -->
+    <data name="DAL.Service.GetNotFoundEx" xml:space="preserve">
+    <value>La entidad no existe (Error 0001)</value>
+  </data>
+    <data name="DAL.Service.GetAsyncNotFoundEx" xml:space="preserve">
+    <value>La entidad no existe (Error 0002)</value>
+  </data>
+    <data name="DAL.Service.AccessDeniedEx" xml:space="preserve">
+    <value>No tiene los permisos necesarios para realizar operaciones con esta entidad (Error 0036)</value>
+  </data>
+    <data name="DAL.Service.CanAccessUnexpectedEx" xml:space="preserve">
+    <value>Se produjo un error verificando los permisos (Error 0037)</value>
+  </data>
+    <data name="DAL.ServiceTenantDependents.AccessDeniedEx" xml:space="preserve">
+    <value>No puede realizar operaciones sobre esta entidad porque no pertenece a las organizaciones requeridas (Error 0038)</value>
+  </data>
+    <data name="Binit.Framework.ExceptionHandling.HandleDbValidationEx" xml:space="preserve">
+    <value>Se produjo un error de validación al guardar los datos (Error 0044)</value>
+  </data>
+    <!-- End DAL -->
+    <!-- Binit.Framework -->
+    <!-- Exception Handling -->
+    <data name="Binit.Framework.ExceptionHandling.HandleEmailEx" xml:space="preserve">
+    <value>Se produjo un error enviando el email(Error 0003)</value>
+  </data>
+    <data name="Binit.Framework.ExceptionHandling.HandleSQLEx" xml:space="preserve">
+    <value>Se produjo un error de acceso a datos (Error 0004)</value>
+  </data>
+    <data name="Binit.Framework.ExceptionHandling.HandleIOEx" xml:space="preserve">
+    <value>Se produjo un error de acceso a archivos (Error 0005)</value>
+  </data>
+    <data name="Binit.Framework.ExceptionHandling.HandleGenericEx" xml:space="preserve">
+    <value>Se produjo un error inesperado (Error 0006)</value>
+  </data>
+    <data name="Binit.Framework.ExceptionHandling.RealmAuthorizationFailedEx" xml:space="preserve">
+    <value>Acceso denegado (Error 0039)</value>
+  </data>
+    <data name="Binit.Framework.ExceptionHandling.ResourceNotFoundGenericEx" xml:space="preserve">
+    <value>El recurso al que está intentando acceder no fue encontrado (Error 0040)</value>
+  </data>
+    <data name="Binit.Framework.ExceptionHandling.HandleUnauthorizedEx" xml:space="preserve">
+    <value>Acceso no autorizado (Error 0041)</value>
+  </data>
+    <!-- End Exception Handling -->
+    <!-- Helpers -->
+    <!-- Email -->
+    <!-- Views -->
+    <!-- Welcome -->
+    <data name="Binit.Framework.Helpers.Email.Views.Welcome.Title" xml:space="preserve">
+    <value>Bienvenido</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.Welcome.Intro" xml:space="preserve">
+    <value>Bienvenido {0}</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.Welcome.CallToActionText" xml:space="preserve">
+    <value>Hacé clic en el siguiente link para confirmar tu correo electrónico</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.Welcome.CallToActionButton" xml:space="preserve">
+    <value>Confirmar email</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.Welcome.Footer" xml:space="preserve">
+    <value>© 2019 {0}. Todos los derechos reservados.</value>
+  </data>
+    <!-- End Welcome -->
+    <!-- ForgotPassword -->
+    <data name="Binit.Framework.Helpers.Email.Views.ForgotPassword.Title" xml:space="preserve">
+    <value>Olvidé mi contraseña</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.ForgotPassword.Intro" xml:space="preserve">
+    <value>{0}, olvidaste tu contraseña?</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.ForgotPassword.CallToActionText" xml:space="preserve">
+    <value>Hace clic en el siguiente link para resetear tu contraseña: </value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.ForgotPassword.CallToActionButton" xml:space="preserve">
+    <value>Resetear contraseña</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.ForgotPassword.Footer" xml:space="preserve">
+    <value>© 2019 {0} - BINIR SRL. Todos los derechos reservados.</value>
+  </data>
+    <!-- End ForgotPassword -->
+    <!-- PasswordRecovery -->
+    <data name="Binit.Framework.Helpers.Email.Views.PasswordRecovery.Title" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.PasswordRecovery.CallToActionText" xml:space="preserve">
+    <value>Hace clic en el siguiente link para recuperar tu contraseña: </value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.PasswordRecovery.CallToActionButton" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <data name="Binit.Framework.Helpers.Email.Views.PasswordRecovery.Footer" xml:space="preserve">
+    <value>© 2019 {0} - BINIR SRL. Todos los derechos reservados.</value>
+  </data>
+    <!-- End PasswordRecovery -->
+    <!-- End Views -->
+    <!-- End Email -->
+    <!-- ExcelHelper -->
+    <data name="Binit.Framework.Helpers.ExcelHelper.ImportWrongFileExtensionEx" xml:space="preserve">
+    <value>La extensión del archivo no es soportada (Error 0042)</value>
+  </data>
+    <data name="Binit.Framework.Helpers.ExcelHelper.ImportFileNotProvidedEx" xml:space="preserve">
+    <value>El archivo estaba vacío o no fue provisto (Error 0043)</value>
+  </data>
+    <data name="Binit.Framework.Helpers.ExcelHelper.ImportInvalidDateFormat" xml:space="preserve">
+    <value>El formato de la fecha debe ser {0} format</value>
+  </data>
+    <data name="Binit.Framework.Helpers.ExcelHelper.ImportCouldntCastValue" xml:space="preserve">
+    <value>El valor {0} no pudo convertirse en {1}</value>
+  </data>
+    <data name="Binit.Framework.Helpers.ExcelHelper.ExportHeadersDontMatchCells" xml:space="preserve">
+    <value>La cantidad de encabezados es diferente a la cantidad de celdas.</value>
+  </data>
+    <!-- End ExcelHelper -->
+    <!-- End Helpers -->
+    <!-- End Binit.Framework -->
+    <!-- Domain.Logic.BusinessLogic -->
+    <!-- HolidayBusinessLogic -->
+    <data name="Domain.Logic.BusinessLogic.HolidayBusinessLogic.ExcelExportFilename" xml:space="preserve">
+    <value>DiasNoLaborales-{0}.xlsx</value>
+  </data>
+    <!-- End HolidayBusinessLogic -->
+  <!-- StatisticsBusinessLogic -->
+  <data name="Domain.Logic.BusinessLogic.StatisticsBusinessLogic.ExcelExportFilename" xml:space="preserve">
+    <value>DiasNoLaborales-{0}.xlsx</value>
+  </data>
+  <data name="Domain.Logic.BusinessLogic.StatisticsBusinessLogic.TotalGames" xml:space="preserve">
+    <value>Juegos Totales</value>
+  </data>
+  <data name="Domain.Logic.BusinessLogic.StatisticsBusinessLogic.Finished" xml:space="preserve">
+    <value>Cantidad de partidas terminadas</value>
+  </data>
+  <data name="Domain.Logic.BusinessLogic.StatisticsBusinessLogic.CorrectAnswers" xml:space="preserve">
+    <value>Porcentaje de respuestas correctas</value>
+  </data>
+  <!-- End StatisticsBusinessLogic -->
+    <!-- End Domain.Logic.BusinessLogic -->
+    <!-- Domain.Logic.Services -->
+    <!-- ErrorLogService -->
+    <data name="Domain.Logic.Services.ErrorLogService.LogErrorFailedEx" xml:space="preserve">
+    <value>Error al intentar loguear la excepción. Verifique que la base de datos de Logs exista y que su ubicación coincida con la connection string (Error 0035)
+    --------------------------------------------------------- Excepción:
+    {0}
+    --------------------------------------- Error que no pudo loguearse:
+    {1}
+    </value>
+  </data>
+    <!--End ErrorLogService -->
+    <!-- AccountService -->
+    <data name="Domain.Logic.Services.AccountService.LoginUserNotFoundEx" xml:space="preserve">
+    <value>El usuario no existe (Error 0007)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.RegisterFailedEx" xml:space="preserve">
+    <value>El registro de usuario falló (Error 0008)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.RegisterInvalidPasswordEx" xml:space="preserve">
+    <value>La contraseña requiere al menos 6 caracteres, un número, una letra en mayúscula y un simbolo (Error 0032)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.ConfirmEmailUserNotFoundEx" xml:space="preserve">
+    <value>El usuario no existe (Error 0009)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.ConfirmEmailFailedEx" xml:space="preserve">
+    <value>La confirmación de email falló (Error 0010)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.CreatePasswordUserNotFoundEx" xml:space="preserve">
+    <value>El usuario no existe (Error 0011)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.CreatePasswordConfirmEmailFailedEx" xml:space="preserve">
+    <value>La confirmación de email falló (Error 0012)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.CreatePasswordAddPasswordFailedEx" xml:space="preserve">
+    <value>No se pudo establecer la contraseña (Error 0013)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.GeneratePasswordTokenUserNotFoundEx" xml:space="preserve">
+    <value>El usuario no existe o aún no fué confirmado (Error 0014)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.ResetPasswordUserNotFoundEx" xml:space="preserve">
+    <value>El usuario no existe (Error 0015)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.ResetPasswordFailedEx" xml:space="preserve">
+    <value>No se pudo restablecer la contraseña (Error 0016)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.ChangePasswordUserNotFoundEx" xml:space="preserve">
+    <value>No se encontró ningún usuario logueado (Error 0017)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.ChangePasswordFailedEx" xml:space="preserve">
+    <value>El cambio de la contraseña falló (Error 0018)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.SetPasswordUserNotFoundEx" xml:space="preserve">
+    <value>No se encontró ningún usuario logueado (Error 0019)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.SetPasswordFailedEx" xml:space="preserve">
+    <value>No se pudo establecer la contraseña (Error 0020)</value>
+  </data>
+    <data name="Domain.Logic.Services.AccountService.SocialAuthenticationFailedEx" xml:space="preserve">
+    <value>No se pudo ingresar con su red social (Error 0021)</value>
+  </data>
+    <!-- End AccountService -->
+    <!-- UserService -->
+    <data name="Domain.Logic.Services.UserService.CreateAsyncFailed" xml:space="preserve">
+    <value>El registro de usuario falló (Error 0021)</value>
+  </data>
+    <data name="Domain.Logic.Services.UserService.CreateAsyncAddRolesFailed" xml:space="preserve">
+    <value>Se produjo un error asignando los roles al usuario(Error 0022)</value>
+  </data>
+    <data name="Domain.Logic.Services.UserService.CreateAsyncAddTenantClaimFailedEx" xml:space="preserve">
+    <value>Se produjo un error agregando el tenant claim (Error 0046)</value>
+  </data>
+    <data name="Domain.Logic.Services.UserService.UpdateAsyncFailed" xml:space="preserve">
+    <value>Se produjo un error al modificar el usuario (Error 0023)</value>
+  </data>
+    <data name="Domain.Logic.Services.UserService.UpdateAsyncRemoveRolesFailed" xml:space="preserve">
+    <value>Se produjo un error eliminando los roles del usuario (Error 0024)</value>
+  </data>
+    <data name="Domain.Logic.Services.UserService.UpdateAsyncAddRolesFailed" xml:space="preserve">
+    <value>Se produjo un error asignando los roles al usuario(Error 0025)</value>
+  </data>
+    <data name="Domain.Logic.Services.UserService.UpdateAsyncReplaceTenantClaimFailedEx" xml:space="preserve">
+    <value>Se produjo un error remplazando el tenant claim (Error 0045)</value>
+  </data>
+    <data name="Domain.Logic.Services.UserService.AutoDeleteNotAllowed" xml:space="preserve">
+    <value>Los usuarios no pueden eliminarse a si mismos.</value>
+  </data>
+    <!-- End UserService -->
+    <!-- FrontUserService -->
+    <data name="Domain.Logic.Services.FrontUserService.CreateAsyncFailed" xml:space="preserve">
+    <value>El registro de usuario de Front falló (Error 0021)</value>
+  </data>
+    <data name="Domain.Logic.Services.FrontUserService.CreateAsyncAddRolesFailed" xml:space="preserve">
+    <value>Se produjo un error asignando los roles al usuario de Front(Error 0022)</value>
+  </data>
+    <data name="Domain.Logic.Services.FrontUserService.UpdateAsyncFailed" xml:space="preserve">
+    <value>Se produjo un error al modificar el usuario de Front (Error 0023)</value>
+  </data>
+    <data name="Domain.Logic.Services.FrontUserService.UpdateAsyncRemoveRolesFailed" xml:space="preserve">
+    <value>Se produjo un error eliminando los roles del usuario de Front (Error 0024)</value>
+  </data>
+    <data name="Domain.Logic.Services.FrontUserService.UpdateAsyncAddRolesFailed" xml:space="preserve">
+    <value>Se produjo un error asignando los roles al usuario de Front (Error 0025)</value>
+  </data>
+    <!-- End FrontUserService -->
+    <!-- BackOfficeUserService -->
+    <data name="Domain.Logic.Services.BackOfficeUserService.CreateAsyncFailed" xml:space="preserve">
+    <value>El registro de usuario de BackOffice falló (Error 0021)</value>
+  </data>
+    <data name="Domain.Logic.Services.BackOfficeUserService.CreateAsyncAddRolesFailed" xml:space="preserve">
+    <value>Se produjo un error asignando los roles al usuario de BackOffice (Error 0022)</value>
+  </data>
+    <data name="Domain.Logic.Services.BackOfficeUserService.UpdateAsyncFailed" xml:space="preserve">
+    <value>Se produjo un error al modificar el usuario de BackOffice (Error 0023)</value>
+  </data>
+    <data name="Domain.Logic.Services.BackOfficeUserService.UpdateAsyncRemoveRolesFailed" xml:space="preserve">
+    <value>Se produjo un error eliminando los roles del usuario de BackOffice (Error 0024)</value>
+  </data>
+    <data name="Domain.Logic.Services.BackOfficeUserService.UpdateAsyncAddRolesFailed" xml:space="preserve">
+    <value>Se produjo un error asignando los roles al usuario de BackOffice (Error 0025)</value>
+  </data>
+    <!-- End BackOfficeUserService -->
+    <!-- CategoryService -->
+    <data name="Domain.Logic.Services.CategoryService.DeleteWithRelatedProductEx" xml:space="preserve">
+    <value>La categoría está relacionada a un producto y no puede ser eliminada (Error 0026)</value>
+  </data>
+    <data name="Domain.Logic.Services.CategoryService.DeleteAsyncWithRelatedProductEx" xml:space="preserve">
+    <value>La categoría está relacionada a un producto y no puede ser eliminada (Error 0027)</value>
+  </data>
+    <!-- End CategoryService -->
+    <!-- ProductService -->
+    <data name="Domain.Logic.Services.ProductService.GetFullNotFoundEx" xml:space="preserve">
+    <value>Producto no encontrado (Error 0028)</value>
+  </data>
+    <data name="Domain.Logic.Services.ProductService.GetFullAsyncNotFoundEx" xml:space="preserve">
+    <value>Producto no encontrado (Error 0029)</value>
+  </data>
+    <!-- End ProductService -->
+    <!-- ThemeService -->
+    <data name="Domain.Logic.Services.ThemeService.GetFullNotFoundEx" xml:space="preserve">
+    <value>Tema no encontrado (Error 0028)</value>
+  </data>
+    <data name="Domain.Logic.Services.ThemeService.GetFullAsyncNotFoundEx" xml:space="preserve">
+    <value>Tema no encontrado (Error 0029)</value>
+  </data>
+    <data name="Domain.Logic.Services.ThemeService.DeleteAsyncWithRelatedThemeEx" xml:space="preserve">
+    <value>No se puede borrar este tema</value>
+  </data>
+    <!-- End ThemeService -->
+    <!-- HolidayTypeService -->
+    <data name="Domain.Logic.Services.HolidayTypeService.DeleteWithRelatedHolidayEx" xml:space="preserve">
+    <value>Este tipo de día no laboral no puede ser eliminado por estar relacionado a un día no laboral (Error 0030)</value>
+  </data>
+    <data name="Domain.Logic.Services.HolidayTypeService.DeleteAsyncWithRelatedHolidayEx" xml:space="preserve">
+    <value>Este tipo de día no laboral no puede ser eliminado por estar relacionado a un día no laboral (Error 0031)</value>
+  </data>
+    <!-- End HolidayTypeService -->
+    <!-- HolidayService -->
+    <data name="Domain.Logic.Services.HolidayService.GetFullNotFoundEx" xml:space="preserve">
+    <value>Dia no laboral no encontrado (Error 0028)</value>
+  </data>
+    <data name="Domain.Logic.Services.HolidayService.GetFullAsyncNotFoundEx" xml:space="preserve">
+    <value>Dia no laboral no encontrado (Error 0029)</value>
+  </data>
+    <!-- End HolidayService -->
+    <!-- EventService -->
+    <data name="Domain.Logic.Services.EventService.GetFullNotFoundEx" xml:space="preserve">
+    <value>Evento no encontrado (Error 00)</value>
+  </data>
+    <data name="Domain.Logic.Services.EventService.GetFullAsyncNotFoundEx" xml:space="preserve">
+    <value>Evento no encontrado (Error 00)</value>
+  </data>
+    <!-- End EventService -->
+    <!-- End Domain.Logic.Services -->
+    <!-- End Exceptions -->
+    <!-- Web API -->
+    <!-- AccountController -->
+    <data name="WebAPI.Controllers.AccountController.LoginRequires2FA" xml:space="preserve">
+    <value>Requiere autenticación de dos factores</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.LoginAccountLocked" xml:space="preserve">
+    <value>La cuenta está bloqueada</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.LoginIncorrectCredentials" xml:space="preserve">
+    <value>Email o contraseña incorrectas</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.LoginError" xml:space="preserve">
+    <value>Se produjo un error al ingresar. Intente de nuevo mas tarde.</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.RegisterEmailSubject" xml:space="preserve">
+    <value>Confirmar email</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.ForgotPasswordEmailSubject" xml:space="preserve">
+    <value>Restablecer contraseña</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.ChangePasswordNotFound" xml:space="preserve">
+    <value>Usuario no encontrado</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.SetPasswordNotFound" xml:space="preserve">
+    <value>Usuario no encontrado</value>
+  </data>
+    <data name="WebAPI.Controllers.AccountController.CreatePasswordNotFound" xml:space="preserve">
+    <value>Usuario no encontrado</value>
+  </data>
+    <!-- End AccountController -->
+    <!-- QuestionController -->
+    <data name="WebApp.Controllers.QuestionController.IndexTitle" xml:space="preserve">
+    <value>Preguntas</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.CreateTitle" xml:space="preserve">
+    <value>Crear una nueva pregunta</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.EditTitle" xml:space="preserve">
+    <value>Editar pregunta</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.FourAnswers" xml:space="preserve">
+    <value>Necesitas solo 4 respuestas</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.OneCorrect" xml:space="preserve">
+    <value>Solo necesitas una respuesta correcta</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.DetailsTitle" xml:space="preserve">
+    <value>Detalles de pregunta</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.DeleteSuccess" xml:space="preserve">
+    <value>Pregunta borrada exitosamente</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado</value>
+  </data>
+    <!-- End QuestionController -->
+  <!-- StatisticsController -->
+  <data name="WebApp.Controllers.StatisticsController.IndexTitle" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="WebApp.Controllers.StatisticsController.PieChart" xml:space="preserve">
+    <value>Porcentaje de preguntas por temas</value>
+  </data>
+  <data name="WebApp.Controllers.StatisticsController.BarChart" xml:space="preserve">
+    <value>Juegos perfectos por tema</value>
+  </data>
+  <data name="WebApp.Controllers.StatisticsController.InvertChart" xml:space="preserve">
+    <value>Porcentaje de respuestas correctas por tema</value>
+  </data>
+  <data name="WebApp.Controllers.StatisticsController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado</value>
+  </data>
+  <!-- End StatisticsController -->
+    <!-- GameController -->
+    <data name="WebApp.Controllers.GameController.IndexTitle" xml:space="preserve">
+    <value>Juego</value>
+  </data>
+    <data name="WebApp.Controllers.GameController.ResultTitle" xml:space="preserve">
+    <value>Resultados</value>
+  </data>
+    <data name="WebApp.Controllers.GameController.PlayTitle" xml:space="preserve">
+    <value>Jugando</value>
+  </data>
+    <data name="WebApp.Views.Game.Index.Play" xml:space="preserve">
+    <value>Jugar</value>
+  </data>
+    <data name="WebApp.Views.Game.Play.Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+    <data name="WebApp.Views.Game.Play.Done" xml:space="preserve">
+    <value>Terminar</value>
+  </data>
+    <data name="WebApp.Views.Game.Index.Statistics" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+    <data name="WebApp.Views.Game.Index.Soon" xml:space="preserve">
+    <value>Próximamente</value>
+  </data>
+    <data name="WebApp.Controllers.QuestionController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado</value>
+  </data>
+    <!-- End GameController -->
+  <!-- StatisticsController -->
+  <data name="WebApp.Views.Statistics.Index.Play" xml:space="preserve">
+    <value>Jugar</value>   
+    </data>
+    <!-- End StatisticsController -->
+    <!-- UserController -->
+    <data name="WebAPI.Controllers.UserController.CreateWelcomeEmailSubject" xml:space="preserve">
+    <value>Confirmar email</value>
+  </data>
+    <data name="WebAPI.Controllers.UserController.PasswordRecoveryEmailSubject" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <!-- EndUserController -->
+    <!-- AccountDTOs -->
+    <!-- ChangePasswordReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.ChangePasswordReq.OldPasswordStringLength" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ChangePasswordReq.OldPasswordRequired" xml:space="preserve">
+    <value>La contraseña actual es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ChangePasswordReq.NewPasswordStringLength" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ChangePasswordReq.NewPasswordRequired" xml:space="preserve">
+    <value>La nueva contraseña es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ChangePasswordReq.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La nueva contraseña y su confirmación no coinciden.</value>
+  </data>
+    <!-- End ChangePasswordReq -->
+    <!-- ConfirmEmailReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.ConfirmEmailReq.UserIdRequired" xml:space="preserve">
+    <value>El Id del usuario es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ConfirmEmailReq.CodeRequired" xml:space="preserve">
+    <value>El código de confirmación es requerido.</value>
+  </data>
+    <!-- End ConfirmEmailReq -->
+    <!-- CreatePasswordReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.CreatePasswordReq.UserIdRequired" xml:space="preserve">
+    <value>El Id del usuario es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.CreatePasswordReq.CodeRequired" xml:space="preserve">
+    <value>El código de confirmación es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.CreatePasswordReq.NewPasswordRequired" xml:space="preserve">
+    <value>La nueva contraseña es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.CreatePasswordReq.NewPasswordStringLength" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.CreatePasswordReq.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La nueva contraseña y su confirmación no coinciden.</value>
+  </data>
+    <!-- End CreatePasswordReq -->
+    <!-- ForgotPasswordReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.ForgotPasswordReq.EmailRequired" xml:space="preserve">
+    <value>El email es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ForgotPasswordReq.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ForgotPasswordReq.ForgotPasswordEmailCallbackRequired" xml:space="preserve">
+    <value>El campo ForgotPasswordEmailCallback es requerido.</value>
+  </data>
+    <!-- End ForgotPasswordReq -->
+    <!-- LoginReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.LoginReq.EmailRequired" xml:space="preserve">
+    <value>El email es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.LoginReq.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.LoginReq.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida.</value>
+  </data>
+    <!-- End LoginReq -->
+    <!-- RegisterReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.EmailRequired" xml:space="preserve">
+    <value>El email es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.NameStringLength" xml:space="preserve">
+    <value>El nombre debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.RegisterReq.ConfirmEmailCallbackRequired" xml:space="preserve">
+    <value>El campo ConfirmEmailCallback es requerido</value>
+  </data>
+    <!-- End RegisterReq -->
+    <!-- ResetPasswordReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.ResetPasswordReq.EmailRequired" xml:space="preserve">
+    <value>El email es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ResetPasswordReq.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ResetPasswordReq.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ResetPasswordReq.PasswordStringLength" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ResetPasswordReq.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La contraseña y su confirmación no coinciden.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.ResetPasswordReq.CodeRequired" xml:space="preserve">
+    <value>El código para restablecer la contraseña es requerido.</value>
+  </data>
+    <!-- End ResetPasswordReq -->
+    <!-- SetPasswordReq -->
+    <data name="WebAPI.DTOs.AccountDTOs.SetPasswordReq.NewPasswordRequired" xml:space="preserve">
+    <value>La nueva contraseña es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.SetPasswordReq.NewPasswordStringLength" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebAPI.DTOs.AccountDTOs.SetPasswordReq.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La contraseña y su confirmación no coinciden.</value>
+  </data>
+    <!-- End SetPasswordReq -->
+    <!-- End AccountDTOs -->
+    <!-- ApplicationUserDTOs -->
+    <!-- ApplicationUserDTO -->
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.ApplicationUserDTO.EmailRequired" xml:space="preserve">
+    <value>El email es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.ApplicationUserDTO.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.ApplicationUserDTO.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.ApplicationUserDTO.NameStringLength" xml:space="preserve">
+    <value>El nombre debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.ApplicationUserDTO.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.ApplicationUserDTO.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.ApplicationUserDTO.RolesRequired" xml:space="preserve">
+    <value>Los roles son requeridos.</value>
+  </data>
+    <!-- End ApplicationUserDTO -->
+    <!-- CreateUserReq -->
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.EmailRequired" xml:space="preserve">
+    <value>El email es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.NameStringLength" xml:space="preserve">
+    <value>El nombre debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.ConfirmEmailCallbackRequired" xml:space="preserve">
+    <value>El campo ConfirmEmailCallback es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.CreateUserReq.RolesRequired" xml:space="preserve">
+    <value>Los roles son requeridos.</value>
+  </data>
+    <!-- End CreateUserReq -->
+    <!-- PasswordRecoveryReq -->
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.PasswordRecoveryReq.IdRequired" xml:space="preserve">
+    <value>El Id es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ApplicationUserDTOs.PasswordRecoveryReq.RecoveryEmailCallbackRequired" xml:space="preserve">
+    <value>El campo RecoveryEmailCallback es requerido.</value>
+  </data>
+    <!-- End PasswordRecoveryReq -->
+    <!-- End ApplicationUserDTOs -->
+    <!-- ProductDTOs -->
+    <!-- FeatureDTO -->
+    <data name="WebAPI.DTOs.ProductDTOs.FeatureDTO.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ProductDTOs.FeatureDTO.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.ProductDTOs.FeatureDTO.DescriptionStringLenth" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <!-- EndFeatureDTO -->
+    <!-- ProductDTO -->
+    <data name="WebAPI.DTOs.ProductDTOs.ProductDTO.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.ProductDTOs.ProductDTO.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.ProductDTOs.ProductDTO.DescriptionStringLenth" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebAPI.DTOs.ProductDTOs.ProductDTO.PriceRequired" xml:space="preserve">
+    <value>El precio es requerido.</value>
+  </data>
+    <!-- End ProductDTO -->
+    <!-- ProductEditorDTO -->
+    <data name="WebAPI.DTOs.ProductDTOs.ProductEditorDTO.EditorIdRequired" xml:space="preserve">
+    <value>El id del editor es requerido.</value>
+  </data>
+    <!-- End ProductEditorDTO -->
+    <!-- End ProductDTOs -->
+    <!-- CategoryDTOs -->
+    <!-- CategoryDTO -->
+    <data name="WebAPI.DTOs.CategoryDTOs.CategoryDTO.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+    <data name="WebAPI.DTOs.CategoryDTOs.CategoryDTO.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida.</value>
+  </data>
+    <data name="WebAPI.DTOs.CategoryDTOs.CategoryDTO.DescriptionStringLenth" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <!-- End CategoryDTO -->
+    <!-- End CategoryDTOs -->
+    <!-- End Web API -->
+    <!-- Web App -->
+    <!-- Areas -->
+    <!-- Identity -->
+    <!-- Pages -->
+    <!-- Account -->
+    <!-- AccessDenied -->
+    <data name="WebApp.Areas.Identity.Pages.Account.AccessDenied.Title" xml:space="preserve">
+    <value>Acceso denegado.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.AccessDenied.Description" xml:space="preserve">
+    <value>No posee los permisos requeridos para acceder a este recurso.</value>
+  </data>
+    <!-- End AccessDenied -->
+    <!-- ConfirmEmail -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ConfirmEmail.Title" xml:space="preserve">
+    <value>Confirmar email.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ConfirmEmail.Subtitle" xml:space="preserve">
+    <value>Gracias por confirmar su email.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ConfirmEmail.BackToLogin" xml:space="preserve">
+    <value>Volver al Login</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ConfirmEmail.InvalidOperationException" xml:space="preserve">
+    <value>Error al confirmar el email con el id de usuario '{0}':</value>
+  </data>
+    <!-- End ConfirmEmail -->
+    <!-- Crear contraseña -->
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePassword.Title" xml:space="preserve">
+    <value>Crear contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePassword.PasswordLabel" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePassword.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePassword.PasswordStringLength" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePassword.ConfirmPasswordLabel" xml:space="preserve">
+    <value>Confirmar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePassword.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La contraseña y su confirmación no coinciden.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePassword.SubmitButton" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <!-- End Crear contraseña -->
+    <!-- Crear contraseña Confirmation -->
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePasswordConfirmation.Title" xml:space="preserve">
+    <value>Contraseña creada</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePasswordConfirmation.Subtitle" xml:space="preserve">
+    <value>Gracias por crear su contraseña.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.CreatePasswordConfirmation.BackToLogin" xml:space="preserve">
+    <value>Volver al Login</value>
+  </data>
+    <!-- End Crear contraseña Confirmation -->
+    <!-- External Login -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.Title" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.Subtitle" xml:space="preserve">
+    <value>Asocie su cuenta de {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.Info" xml:space="preserve">
+    <value>Se ha autenticado con éxito con su cuenta de {0}. Por favor ingrese un email a continuación y presione el botón Registrarse para finalizar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.ExternalProviderError" xml:space="preserve">
+    <value>Error del proveedor externo: {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.ExternalLoginErrorOnConfirmation" xml:space="preserve">
+    <value>Error cargando la información del login externo durante la confirmación.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.ExternalLoginError" xml:space="preserve">
+    <value>Error cargando información del login externo.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.SubmitButton" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.LastNameLabel" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.AccountExistsMessage" xml:space="preserve">
+    <value>Ya existe una cuenta con este correo electrónico. </value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogin.AccountExistsBtn" xml:space="preserve">
+    <value>Asociar</value>
+  </data>
+    <!-- End External Login -->
+    <!-- Olvidó su contraseña -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.Title" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.Subtitle" xml:space="preserve">
+    <value>Ingrese su email.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.SubmitButton" xml:space="preserve">
+    <value>Recuperar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.BackToLogin" xml:space="preserve">
+    <value>Volver al Login</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPassword.SendEmailTitle" xml:space="preserve">
+    <value>¿Olvidó su contraseña?</value>
+  </data>
+    <!-- End Olvidó su contraseña -->
+    <!-- Olvidó su contraseña Confirmation -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.Title" xml:space="preserve">
+    <value>Olvidó su contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.Subtitle" xml:space="preserve">
+    <value>Si el usuario existe en el sistema, recibirá un correo electrónico indicando cómo recuperar la contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.BackToLogin" xml:space="preserve">
+    <value>Volver al Login</value>
+  </data>
+    <!-- End Olvidó su contraseña Confirmation -->
+    <!-- Lockout -->
+    <data name="WebApp.Areas.Identity.Pages.Account.Lockout.Title" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Lockout.Subtitle" xml:space="preserve">
+    <value>Esta cuenta fue bloqueada.</value>
+  </data>
+    <!-- End Lockout -->
+    <!-- Login -->
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.Title" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.RememberMe" xml:space="preserve">
+    <value>Recordarme</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.ForgotPassword" xml:space="preserve">
+    <value>¿Olvidó su contraseña?</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.SubmitButton" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.NoAccount" xml:space="preserve">
+    <value>¿No tiene una cuenta?</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.SignUp" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.WithGoogle" xml:space="preserve">
+    <value>Ingresar con Google</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.WithFacebook" xml:space="preserve">
+    <value>Ingresar con Facebook</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.WithTwitter" xml:space="preserve">
+    <value>Ingresar con Twitter</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.WithAny" xml:space="preserve">
+    <value>Ingresar con {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.PasswordLabel" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.InvalidLoginAttempt" xml:space="preserve">
+    <value>Usuario y contraseña no válidos</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Login.NotAllowedAttempt" xml:space="preserve">
+    <value>Por favor, confirmá tu cuenta antes para poder ingresar.</value>
+  </data>
+    <!-- End Login -->
+    <!-- Login with 2FA -->
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.Title" xml:space="preserve">
+    <value>Autenticación de dos factores</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.Subtitle" xml:space="preserve">
+    <value>Su cuenta está protegida por una app de autenticación. Ingrese el código de autenticación a continuación.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.SubmitButton" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.LoginRecoveryCodeText" xml:space="preserve">
+    <value>¿No tiene acceso a su dispositivo de autenticación? Puede</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.LoginRecoveryCodeButton" xml:space="preserve">
+    <value>Ingresar con un código de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.TwoFactorCodeStringLength" xml:space="preserve">
+    <value>El campo {0} debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.TwoFactorCodeLabel" xml:space="preserve">
+    <value>Código de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.TwoFactorCodeRequired" xml:space="preserve">
+    <value>El código de autenticación es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.RememberMachineLabel" xml:space="preserve">
+    <value>Recordar este dispositivo</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.InvalidOperationException" xml:space="preserve">
+    <value>No se pudo cargar la autenticación de dos factores.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWith2FA.InvalidCode" xml:space="preserve">
+    <value>Código de autenticación invalido.</value>
+  </data>
+    <!-- End Login with 2FA -->
+    <!-- Login with recovery code -->
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWithRecoveryCode.Title" xml:space="preserve">
+    <value>Verificación de código de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWithRecoveryCode.Subtitle" xml:space="preserve">
+    <value>Usted ha solicitado ingresar con un código de recuperación. Esta cuenta no será recordada hasta que provea un código 
+    de autenticación generado por una app de autenticación al ingresar utilizando autenticación de dos factores.
+    </value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWithRecoveryCode.SubmitButton" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWithRecoveryCode.RecoveryCodeRequired" xml:space="preserve">
+    <value>El código de recuperación es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWithRecoveryCode.RecoveryCodeLabel" xml:space="preserve">
+    <value>Código de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWithRecoveryCode.InvalidOperationException" xml:space="preserve">
+    <value>No se pudo cargar la autenticación de dos factores.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.LoginWithRecoveryCode.InvalidCode" xml:space="preserve">
+    <value>El código de recuperación ingresado es invalido.</value>
+  </data>
+    <!-- End Login with recovery code -->
+    <!-- Logout -->
+    <data name="WebApp.Areas.Identity.Pages.Account.Logout.Title" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Logout.Subtitle" xml:space="preserve">
+    <value>Haz salido con éxito de la aplicación</value>
+  </data>
+    <!-- End Logout -->
+    <!-- Register -->
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.Title" xml:space="preserve">
+    <value>Registrarse ahora</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.Subtitle" xml:space="preserve">
+    <value>Crear una nueva cuenta.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.SubmitButton" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.ExistingAccount" xml:space="preserve">
+    <value>¿Ya tiene una cuenta?</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.LoginButton" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.LastNameLabel" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.PasswordLabel" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.ConfirmPasswordLabel" xml:space="preserve">
+    <value>Confirmar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.NameStringLength" xml:space="preserve">
+    <value>El nombre debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.PasswordStringLength" xml:space="preserve">
+    <value>La contraseña debe tener de {2} a {1} caracteres.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La contraseña y su confirmación no coinciden.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.ConfirmationEmailTitle" xml:space="preserve">
+    <value>Confirmar email</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Register.PasswordRequirements" xml:space="preserve">
+    <value>La contraseña requiere al menos 6 caracteres, un número, una letra en mayúscula y un simbolo</value>
+  </data>
+    <!-- End Register -->
+    <!-- Restablecer contraseña -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.Title" xml:space="preserve">
+    <value>Restablecer contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.Subtitle" xml:space="preserve">
+    <value>Restablezca su contraseña.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.SubmitButton" xml:space="preserve">
+    <value>Restablecer</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.PasswordStringLength" xml:space="preserve">
+    <value>La contraseña debe tener de {2} a {1} caracteres.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.PasswordLabel" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.ConfirmPasswordLabel" xml:space="preserve">
+    <value>Confirmar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.CodeLabel" xml:space="preserve">
+    <value>Código</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPassword.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La contraseña y su confirmación no coinciden.</value>
+  </data>
+    <!-- End Restablecer contraseña -->
+    <!-- Restablecer contraseña Confirmation -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPasswordConfirmation.Title" xml:space="preserve">
+    <value>Confirmación de restablececimiento de contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPasswordConfirmation.SubtitleText" xml:space="preserve">
+    <value>Su contraseña fue restablecida </value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetPasswordConfirmation.SubtitleButton" xml:space="preserve">
+    <value>Presione aqui para ingresar</value>
+  </data>
+    <!-- End Restablecer contraseña Confirmation -->
+    <!-- Manage -->
+    <data name="WebApp.Areas.Identity.Pages.Account.Manage.Title" xml:space="preserve">
+    <value>Gestionar tu cuenta</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Manage.Subtitle" xml:space="preserve">
+    <value>Cambiar las configuraciones de tu cuenta</value>
+  </data>
+    <!-- End Manage -->
+    <!-- ManageNav -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ManageNav.Profile" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ManageNav.ChangePassword" xml:space="preserve">
+    <value>Cambiar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ManageNav.ExternalLogin" xml:space="preserve">
+    <value>Ingresos externos</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ManageNav.TwoFA" xml:space="preserve">
+    <value>Autenticación de doble factor</value>
+  </data>
+    <!-- End ManageNav -->
+    <!-- Profile -->
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.Title" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.SendVerificationEmail" xml:space="preserve">
+    <value>Enviar mail de verificación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.SubmitButton" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.UsernameLabel" xml:space="preserve">
+    <value>Nombre de usuario</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.EmailLabel" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.LastNameLabel" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.PhoneNumberLabel" xml:space="preserve">
+    <value>Número de teléfono</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.EmailRequired" xml:space="preserve">
+    <value>El correo electrónico es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.NameStringLength" xml:space="preserve">
+    <value>El nombre debe tener menos de {1} caracteres.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe tener menos de {1} caracteres.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.ErrorSettingEmail" xml:space="preserve">
+    <value>Ocurrió un error inesperado al establecer el email para el usuario con Id {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.ErrorSettingPhone" xml:space="preserve">
+    <value>Ocurrió un error inesperado al establecer el teléfono para el usuario con Id {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.Updated" xml:space="preserve">
+    <value>Tu perfil ha sido actualizado</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.VerificationEmailTitle" xml:space="preserve">
+    <value>Confirmá tu correo electrónico</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.VerificationEmailBody" xml:space="preserve">
+    <value>Por favor, confirmá tu cuenta en {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.EmailSent" xml:space="preserve">
+    <value>Email de verificación enviado. Por favor, revisá tu correo electrónico</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.PhoneNumberInvalid" xml:space="preserve">
+    <value>El número de teléfono no es válido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.Profile.ClickHere" xml:space="preserve">
+    <value>clickeando aqui</value>
+  </data>
+    <!-- End Profile -->
+    <!-- Cambiar contraseña -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.Title" xml:space="preserve">
+    <value>Cambiar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.SubmitButton" xml:space="preserve">
+    <value>Modificar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.OldPasswordRequired" xml:space="preserve">
+    <value>La contraseña actual es requerida</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.NewPasswordRequired" xml:space="preserve">
+    <value>La nueva contraseña es requerida</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.OldPasswordLabel" xml:space="preserve">
+    <value>Contraseña actual</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.NewPasswordLabel" xml:space="preserve">
+    <value>Nueva contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.ConfirmNewPasswordLabel" xml:space="preserve">
+    <value>Confirmar contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.NewPasswordStringLength" xml:space="preserve">
+    <value>La nueva contraseña debe tener entre {2} y {1} caracteres.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La nueva contraseña y su confirmación no coinciden.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.CannotLoadUser" xml:space="preserve">
+    <value>No se pudo cargar el usuario.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ChangePassword.PasswordChanged" xml:space="preserve">
+    <value>Su contraseña fue modificada.</value>
+  </data>
+    <!-- End Cambiar contraseña -->
+    <!-- Reset Authenticator -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetAuthenticator.Title" xml:space="preserve">
+    <value>Restablecer clave de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetAuthenticator.ParagraphOne" xml:space="preserve">
+    <value>Si restablece su clave de autenticación la aplicación de autenticación no funcionará hasta que la re-configure.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetAuthenticator.ParagraphTwo" xml:space="preserve">
+    <value>Este proceso deshabilita la aplicación de autenticación de dos factores. 
+    Si no completa la configuración de su aplicación de autenticación puede perder el acceso a su cuenta.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetAuthenticator.SubmitButton" xml:space="preserve">
+    <value>Restablecer clave de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetAuthenticator.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ResetAuthenticator.KeyResetSuccess" xml:space="preserve">
+    <value>Su clave de aplicación de autenticación fue restablecida, necesitará configurar la aplicación de autenticación utilizando la nueva clave.</value>
+  </data>
+    <!-- End Reset Authenticator -->
+    <!-- Delete Personal Data -->
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.Title" xml:space="preserve">
+    <value>Eliminar datos personales</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.Subtitle" xml:space="preserve">
+    <value>Eliminar estos datos eliminará su cuenta y no podrá recuperarla.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.SubmitButton" xml:space="preserve">
+    <value>Eliminar datos y cerrar mi cuenta.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.PasswordRequired" xml:space="preserve">
+    <value>La contraseña es requerida</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.PasswordNotCorrect" xml:space="preserve">
+    <value>Contraseña incorrecta.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.InvalidOperationException" xml:space="preserve">
+    <value>Se produjo un error inesperado eliminando el usuario con ID {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DeletePersonalData.PasswordLabel" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+    <!-- End Delete Personal Data -->
+    <!-- Disable 2FA -->
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.Title" xml:space="preserve">
+    <value>Deshabilitar la autenticación de dos factores (2FA)</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.ParagraphOne" xml:space="preserve">
+    <value>Esta acción solo deshabilita la 2FA.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.ParagraphTwo" xml:space="preserve">
+    <value>Deshabilitar la 2FA no cambia las claves utilizadas en las aplicaciones de autenticación. Si desea cambiar esas claves deberá</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.ParagraphTwoButton" xml:space="preserve">
+    <value>restablecer sus claves de aplicación.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.SubmitButton" xml:space="preserve">
+    <value>Deshabilitar 2FA</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.CannotDisable2FA" xml:space="preserve">
+    <value>No se puede deshabilitar la 2FA para el usuario con ID {0} dado que no está habilitada actualmente.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.InvalidOperationException" xml:space="preserve">
+    <value>Se produjo un error inesperado deshabilitando la 2FA para el usuario con ID {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DisableTwoFA.TwoFADisabled" xml:space="preserve">
+    <value>La 2FA fue deshabilitada. Puede volverla a habilitar si configura una aplicación de autenticación.</value>
+  </data>
+    <!-- End Disable 2FA -->
+    <!-- Download Your data -->
+    <data name="WebApp.Areas.Identity.Pages.Account.DownloadYourData.Title" xml:space="preserve">
+    <value>Descargar sus datos</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.DownloadYourData.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <!-- End Download Your data -->
+    <!-- Enable Authenticator -->
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.Title" xml:space="preserve">
+    <value>Configurar una aplicación de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.Subtitle" xml:space="preserve">
+    <value>Siga los siguientes pasos para utilizar una aplicación de autenticación:</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.ParagraphOne" xml:space="preserve">
+    <value>Descargue una aplicación de autenticación de dos factores como Microsoft Authenticator para </value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.And" xml:space="preserve">
+    <value>y</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.Or" xml:space="preserve">
+    <value> o Google Authenticator y</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.ScanCodeFirst" xml:space="preserve">
+    <value>Escaneé el codigo QR o ingrese este código</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.ScanCodeSecond" xml:space="preserve">
+    <value> en su aplicación de autenticación de 2FA. Los espacios y mayúsculas no importan.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.Enable" xml:space="preserve">
+    <value>Para habilitar la generación de código QR por favor lea nuestra </value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.EnableButton" xml:space="preserve">
+    <value>documentación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.EnterTheCode" xml:space="preserve">
+    <value>Una vez escaneado el código QR o ingresado el código anterior, su aplicación de autenticación de dos factores le proveerá un código único. Ingrese el código de confirmación a continuación.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.VerificationCode" xml:space="preserve">
+    <value>Código de verificación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.SubmitButton" xml:space="preserve">
+    <value>Verificar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.CodeRequired" xml:space="preserve">
+    <value>El código es requerido</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.CodeStringLength" xml:space="preserve">
+    <value>El campo {0} debe tener entre {2} y {1} caracteres..</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.CodeLabel" xml:space="preserve">
+    <value>Código de verificación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.InvalidCode" xml:space="preserve">
+    <value>El código de verificación no es válido.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.EnableAuthenticator.AuthenticatorVerified" xml:space="preserve">
+    <value>Su aplicación de autenticación fue verificada.</value>
+  </data>
+    <!-- End Enable Authenticator -->
+    <!-- External Logins -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.Title" xml:space="preserve">
+    <value>Administrar logins externos</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.Subtitle" xml:space="preserve">
+    <value>Logins registrados</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.SubmitButton" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.AddAnotherService" xml:space="preserve">
+    <value>Agregar otro servicio de login.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.ErrorRemovingExternalService" xml:space="preserve">
+    <value>Se produjo un error inesperado eliminando el login externo para el usuario con ID {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.ExternalLoginRemoved" xml:space="preserve">
+    <value>El login externo fue eliminado.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.ErrorLoadingExternalService" xml:space="preserve">
+    <value>Se produjo un error inesperado cargando la información  del login externo para el usuario con ID {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.ErrorAddingExternalService" xml:space="preserve">
+    <value>Se produjo un error agregando el login externo para el usuario con ID {0}.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.ExternalLoginAdded" xml:space="preserve">
+    <value>El login externo fue agregado.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.WithGoogle" xml:space="preserve">
+    <value>Ingresar con Google</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.WithFacebook" xml:space="preserve">
+    <value>Ingresar con Facebook</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ExternalLogins.WithTwitter" xml:space="preserve">
+    <value>Ingresar con Twitter</value>
+  </data>
+    <!-- End External Logins -->
+    <!-- Generate Recovery Codes -->
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.Title" xml:space="preserve">
+    <value>Generar códigos de recuperación para autenticación de doble factor</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.ParagraphOne" xml:space="preserve">
+    <value>Almacená los códigos en un lugar seguro.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.ParagraphTwo" xml:space="preserve">
+    <value>Si perdes tu dispositivo y no tenes los códigos de recuperación, perderás acceso a tu cuenta</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.ParagraphThree" xml:space="preserve">
+    <value>Generar nuevos códigos de recuperación no cambia las clavés que fueron usadas en la aplicación autenticación. Si querés cambiar la clave
+        utilizada en la app de autenticación, debes </value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.ParagraphThreeButton" xml:space="preserve">
+    <value>Reestablecer las claves del autenticador.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.SubmitButton" xml:space="preserve">
+    <value>Generar claves de recuperación.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.ErrorTwoFADisabled" xml:space="preserve">
+    <value>No se pudo generar claves de recuperación para el usuario con Id {0} porque no tiene 2FA habilitado</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes.NewCodesGenerated" xml:space="preserve">
+    <value>Generaste nuevos códigos de recuperación.</value>
+  </data>
+    <!-- End Generate Recovery Codes -->
+    <!-- Set Password -->
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.Title" xml:space="preserve">
+    <value>Establecer contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.Subtitle" xml:space="preserve">
+    <value>Establecé tu contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.ParagraphOne" xml:space="preserve">
+    <value>No tenés un usuario/contraseña local para este sitio. 
+    Agregá una cuenta local para que puedan ingresar con proveedores externos.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.SubmitButton" xml:space="preserve">
+    <value>Establecer contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.NewPasswordRequired" xml:space="preserve">
+    <value>La nueva contraseña es requerida</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.NewPasswordStringLength" xml:space="preserve">
+    <value>El campo {0} debe tener entre {2} y {1} caracteres...</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.NewPasswordLabel" xml:space="preserve">
+    <value>Nueva contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.ConfirmPasswordLabel" xml:space="preserve">
+    <value>Confirmar nueva contraseña</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.ConfirmPasswordCompare" xml:space="preserve">
+    <value>La nueva contraseña y la confirmación de la nueva contraseña no coinciden.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.CannotLoadUser" xml:space="preserve">
+    <value>No se pudo cargar el usuario.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.SetPassword.PasswordSet" xml:space="preserve">
+    <value>Tu contraseña ha sido establecida.</value>
+  </data>
+    <!-- End Set Password -->
+    <!-- Show Recovery Codes -->
+    <data name="WebApp.Areas.Identity.Pages.Account.ShowRecoveryCodes.Title" xml:space="preserve">
+    <value>Códigos de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ShowRecoveryCodes.ParagraphOne" xml:space="preserve">
+    <value>Almacená estos códigos en un lugar seguro</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.ShowRecoveryCodes.ParagraphTwo" xml:space="preserve">
+    <value>Si perdes tu dispositivo y no tenes los códigos de recuperación, perderás acceso a tu cuenta</value>
+  </data>
+    <!-- End Show Recovery Codes -->
+    <!-- Two Factor Authentication -->
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.Title" xml:space="preserve">
+    <value>Autenticación de doble factor (2FA)</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.NoRecoveryCodesLeft" xml:space="preserve">
+    <value>No tenés ningún código de recuperación disponible</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.NoRecoveryCodesLeftDescription" xml:space="preserve">
+    <value>Debes</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.RecoveryCodesLeftButton" xml:space="preserve">
+    <value>Generar un nuevo conjunto de claves de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.OneRecoveryCodeLeft" xml:space="preserve">
+    <value>Te queda una clave de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.RecoveryCodesLeft" xml:space="preserve">
+    <value>Te quedan {0} claves de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.RecoveryCodesLeftDescription" xml:space="preserve">
+    <value>Puedes</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.ForgetBrowser" xml:space="preserve">
+    <value>Olvidar este navegador</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.DisableTwoFA" xml:space="preserve">
+    <value>Deshabilitar 2FA</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.ResetRecoveryCodes" xml:space="preserve">
+    <value>Reestablecer códigos de recuperación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.SecondSubtitle" xml:space="preserve">
+    <value>Aplicación de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.AddApp" xml:space="preserve">
+    <value>Agregar aplicación de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.SetupApp" xml:space="preserve">
+    <value>Configurar aplicación de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.ResetApp" xml:space="preserve">
+    <value>Reestablecer aplicación de autenticación</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.CannotLoadUser" xml:space="preserve">
+    <value>No se puede cargar el usuario con ID {0}</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.TwoFactorAuthentication.BrowserForgotten" xml:space="preserve">
+    <value>El navegador ha sido olvidado. Cuando ingreses nuevamente desde este navegador se te pedirá el código de autenticación de doble factor.</value>
+  </data>
+    <!-- End Two Factor Authentication -->
+    <!-- Register Confirmation -->
+    <data name="WebApp.Areas.Identity.Pages.Account.RegisterConfirmation.Title" xml:space="preserve">
+    <value>Confirmación de registro</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.RegisterConfirmation.Subtitle" xml:space="preserve">
+    <value>Recibirás un correo electrónico con un link para confirmar tu cuenta</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Pages.Account.RegisterConfirmation.BackToLogin" xml:space="preserve">
+    <value>Volver al Login</value>
+  </data>
+    <!-- End Register Confirmation -->
+    <!-- End Account -->
+    <!-- End Pages -->
+    <!-- Errors -->
+    <data name="WebApp.Areas.Identity.Errors.EmailTaken" xml:space="preserve">
+    <value>El correo electrónico {0} ya fué tomado.</value>
+  </data>
+    <data name="WebApp.Areas.Identity.Errors.UsernameTaken" xml:space="preserve">
+    <value>El nombre de usuario {0} ya fué tomado.</value>
+  </data>
+    <!-- End Errors -->
+    <!-- End Identity -->
+    <!-- End Areas -->
+    <!-- Controllers -->
+    <!-- CategoryController -->
+    <data name="WebApp.Controllers.CategoryController.IndexTitle" xml:space="preserve">
+    <value>Lista de categorías</value>
+  </data>
+    <data name="WebApp.Controllers.CategoryController.CreateTitle" xml:space="preserve">
+    <value>Crear nueva categoría</value>
+  </data>
+    <data name="WebApp.Controllers.CategoryController.EditTitle" xml:space="preserve">
+    <value>Editar categoría</value>
+  </data>
+    <data name="WebApp.Controllers.CategoryController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de categoría</value>
+  </data>
+    <data name="WebApp.Controllers.CategoryController.DeleteSuccess" xml:space="preserve">
+    <value>Categoría eliminada con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.CategoryController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <!-- End CategoryController -->
+    <!-- GeneroController -->
+    <data name="WebApp.Controllers.GeneroController.IndexTitle" xml:space="preserve">
+    <value>Lista de generos</value>
+  </data>
+    <data name="WebApp.Controllers.GeneroController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo genero</value>
+  </data>
+    <data name="WebApp.Controllers.GeneroController.EditTitle" xml:space="preserve">
+    <value>Editar genero</value>
+  </data>
+    <data name="WebApp.Controllers.GeneroController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de genero</value>
+  </data>
+    <data name="WebApp.Controllers.GeneroController.DeleteSuccess" xml:space="preserve">
+    <value>Genero eliminado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.GeneroController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <!-- End GeneroController -->
+    <!-- ChartsController -->
+    <data name="WebApp.Controllers.ChartsController.IndexTitle" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
+    <data name="WebApp.Controllers.ChartsController.RadarFirstDatasetTitle" xml:space="preserve">
+    <value>Primer set de datos</value>
+  </data>
+    <data name="WebApp.Controllers.ChartsController.RadarSecondDatasetTitle" xml:space="preserve">
+    <value>Segundo set de datos</value>
+  </data>
+    <!-- End ChartsController -->
+    <!-- HomeController -->
+    <data name="WebApp.Controllers.HomeController.IndexTitle" xml:space="preserve">
+    <value>Bienvenido a Binit Ignite</value>
+  </data>
+    <data name="WebApp.Controllers.HomeController.PrivacyTitle" xml:space="preserve">
+    <value>Política de privacidad</value>
+  </data>
+    <!-- End HomeController -->
+    <!-- ProductController -->
+    <data name="WebApp.Controllers.ProductController.IndexTitle" xml:space="preserve">
+    <value>Lista de Productos</value>
+  </data>
+    <data name="WebApp.Controllers.ProductController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo producto</value>
+  </data>
+    <data name="WebApp.Controllers.ProductController.EditTitle" xml:space="preserve">
+    <value>Editar producto</value>
+  </data>
+    <data name="WebApp.Controllers.ProductController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de producto</value>
+  </data>
+    <data name="WebApp.Controllers.ProductController.DeleteSuccess" xml:space="preserve">
+    <value>El producto fue eliminado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.ProductController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <!-- End ProductController -->
+    <!-- ThemeController -->
+    <data name="WebApp.Controllers.ThemeController.IndexTitle" xml:space="preserve">
+    <value>Lista de Temas</value>
+  </data>
+    <data name="WebApp.Controllers.ThemeController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo tema</value>
+  </data>
+    <data name="WebApp.Controllers.ThemeController.EditTitle" xml:space="preserve">
+    <value>Editar tema</value>
+  </data>
+    <data name="WebApp.Controllers.ThemeController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de tema</value>
+  </data>
+    <data name="WebApp.Controllers.ThemeController.DeleteSuccess" xml:space="preserve">
+    <value>El tema fue eliminado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.ThemeController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <!-- End ThemeController -->
+    <!-- UserController -->
+    <data name="WebApp.Controllers.UserController.IndexTitle" xml:space="preserve">
+    <value>Listado de Usuarios</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo usuario</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.EditTitle" xml:space="preserve">
+    <value>Editar usuario</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de usuario</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.DeleteSuccess" xml:space="preserve">
+    <value>El usuario fue eliminado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.PasswordRecoveryEmailSubject" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.PasswordRecoverySuccess" xml:space="preserve">
+    <value>El email fue enviado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.UserController.PasswordRecoveryUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <!-- End UserController -->
+    <!-- BackOfficeUserController -->
+    <data name="WebApp.Controllers.BackOfficeUserController.IndexTitle" xml:space="preserve">
+    <value>Listado de Usuarios de BackOffice</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo usuario</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.EditTitle" xml:space="preserve">
+    <value>Editar usuario</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de usuario</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.DeleteSuccess" xml:space="preserve">
+    <value>El usuario fue eliminado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.PasswordRecoveryEmailSubject" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.PasswordRecoverySuccess" xml:space="preserve">
+    <value>El email fue enviado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.BackOfficeUserController.PasswordRecoveryUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <!-- End BackOfficeUserController -->
+    <!-- FrontUserController -->
+    <data name="WebApp.Controllers.FrontUserController.IndexTitle" xml:space="preserve">
+    <value>Listado de Usuarios de Front</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo usuario</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.EditTitle" xml:space="preserve">
+    <value>Editar usuario</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de usuario</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.DeleteSuccess" xml:space="preserve">
+    <value>El usuario fue eliminado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.PasswordRecoveryEmailSubject" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.PasswordRecoverySuccess" xml:space="preserve">
+    <value>El email fue enviado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.FrontUserController.PasswordRecoveryUnexpectedError" xml:space="preserve">
+    <value>Se produjo un error inesperado</value>
+  </data>
+    <!-- End FrontUserController -->
+    <!-- HolidayTypeController  -->
+    <data name="WebApp.Controllers.HolidayTypeController.IndexTitle" xml:space="preserve">
+    <value>Lista de Tipos de días no laborales</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayTypeController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo Tipo de día no laboral</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayTypeController.EditTitle" xml:space="preserve">
+    <value>Editar tipo de día no laboral</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayTypeController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de Tipo de dia no laboral</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayTypeController.DeleteSuccess" xml:space="preserve">
+    <value>Tipo de dia no laboral eliminado</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayTypeController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado</value>
+  </data>
+    <!-- EndHolidayTypeController  -->
+    <!-- HolidayController  -->
+    <data name="WebApp.Controllers.HolidayController.IndexTitle" xml:space="preserve">
+    <value>Lista de días no laborales</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo día no laboral</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayController.EditTitle" xml:space="preserve">
+    <value>Editar día no laboral</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayController.DetailsTitle" xml:space="preserve">
+    <value>Detalles de día no laboral</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayController.DeleteSuccess" xml:space="preserve">
+    <value>Día no laboral eliminado con éxito</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayController.NoUsersMessage" xml:space="preserve">
+    <value>Ningún usuario seleccionado</value>
+  </data>
+    <data name="WebApp.Controllers.HolidayController.ImportUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado importando el archivo</value>
+  </data>
+    <!-- EndHolidayController  -->
+    <!-- TenantController  -->
+    <data name="WebApp.Controllers.TenantController.IndexTitle" xml:space="preserve">
+    <value>Organizaciones</value>
+  </data>
+    <data name="WebApp.Controllers.TenantController.CreateTitle" xml:space="preserve">
+    <value>Crear nueva organización</value>
+  </data>
+    <data name="WebApp.Controllers.TenantController.EditTitle" xml:space="preserve">
+    <value>Editar organización</value>
+  </data>
+    <data name="WebApp.Controllers.TenantController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de organización</value>
+  </data>
+    <data name="WebApp.Controllers.TenantController.DeleteSuccess" xml:space="preserve">
+    <value>Organización eliminada</value>
+  </data>
+    <data name="WebApp.Controllers.TenantController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado al eliminar la organización</value>
+  </data>
+    <!-- EndTenantController  -->
+    <!-- EventController  -->
+    <data name="WebApp.Controllers.EventController.IndexTitle" xml:space="preserve">
+    <value>Lista de Eventos</value>
+  </data>
+    <data name="WebApp.Controllers.EventController.CreateTitle" xml:space="preserve">
+    <value>Crear nuevo Evento</value>
+  </data>
+    <data name="WebApp.Controllers.EventController.EditTitle" xml:space="preserve">
+    <value>Editar Evento</value>
+  </data>
+    <data name="WebApp.Controllers.EventController.DetailsTitle" xml:space="preserve">
+    <value>Detalle de Evento</value>
+  </data>
+    <data name="WebApp.Controllers.EventController.DeleteSuccess" xml:space="preserve">
+    <value>Evento eliminado</value>
+  </data>
+    <data name="WebApp.Controllers.EventController.DeleteUnexpectedError" xml:space="preserve">
+    <value>Ocurrió un error inesperado eliminando el Evento</value>
+  </data>
+    <!-- EndEventController  -->
+    <!-- End Controllers -->
+    <!-- ExceptionHandlerMiddleware -->
+    <data name="WebApp.WebTools.ExceptionHandlerMiddleware.ErrorTitle" xml:space="preserve">
+    <value>Parece que hubo un problema</value>
+  </data>
+    <data name="WebApp.WebTools.ExceptionHandlerMiddleware.ErrorTitle404" xml:space="preserve">
+    <value>404</value>
+  </data>
+    <data name="WebApp.WebTools.ExceptionHandlerMiddleware.ErrorGenericDescription" xml:space="preserve">
+    <value>Un equipo de Binitos altamente entrenados fue asignado para resolver este problema</value>
+  </data>
+    <!-- End ExceptionHandlerMiddleware -->
+    <!-- WebTools -->
+    <!-- FileManagerOptions -->
+    <data name="WebApp.WebTools.FileManagerOptions.DictDefaultMessage" xml:space="preserve">
+    <value>Arrastrá y soltá los archivos aquí.</value>
+  </data>
+    <data name="WebApp.WebTools.FileManagerOptions.DictCancelUpload" xml:space="preserve">
+    <value>Cancelar subida...</value>
+  </data>
+    <data name="WebApp.WebTools.FileManagerOptions.DictUploadCanceled" xml:space="preserve">
+    <value>Subida cancelada.</value>
+  </data>
+    <data name="WebApp.WebTools.FileManagerOptions.DictCancelUploadConfirmation" xml:space="preserve">
+    <value>Está seguro que desea cancelar la subida?</value>
+  </data>
+    <data name="WebApp.WebTools.FileManagerOptions.DictRemoveFile" xml:space="preserve">
+    <value>Eliminar archivo</value>
+  </data>
+    <data name="WebApp.WebTools.FileManagerOptions.DictMaxFilesExceeded" xml:space="preserve">
+    <value>No podés subir más archivos.</value>
+  </data>
+    <data name="WebApp.WebTools.FileManagerOptions.DictInvalidFileType" xml:space="preserve">
+    <value>No podés subir archivos de este tipo.</value>
+  </data>
+    <data name="WebApp.WebTools.FileManagerOptions.DictFileTooBig" xml:space="preserve">
+    <value>El archivo es muy grande ({{filesize}}MiB). El máximo permitido es: {{maxFilesize}}MiB.</value>
+  </data>
+    <!-- End FileManagerOptions -->
+    <!-- SweetAlert -->
+    <data name="WebApp.WebTools.SweetAlert.ConfirmLabel" xml:space="preserve">
+    <value>Si</value>
+  </data>
+    <data name="WebApp.WebTools.SweetAlert.CancelLabel" xml:space="preserve">
+    <value>No</value>
+  </data>
+    <!-- End SweetAlert -->
+    <!-- Datatable -->
+    <data name="WebApp.WebTools.Datatable.ActionsLabel" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Datatable -->
+    <!-- IgniteAddress -->
+    <data name="WebApp.WebTools.IgniteAddress.ClearCurrentLocation" xml:space="preserve">
+    <value>Eliminar ubicación actual</value>
+  </data>
+    <!-- End IgniteAddress -->
+    <!-- ExcelImportOptions -->
+    <data name="WebApp.WebTools.ExcelImportOptions.ActionUrlNotDefined" xml:space="preserve">
+    <value>ActionUrl debe ser definida.</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictDefaultMessage" xml:space="preserve">
+    <value>Arrastrá y soltá los archivos aquí.</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictCancelUpload" xml:space="preserve">
+    <value>Cancelar subida...</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictUploadCanceled" xml:space="preserve">
+    <value>Subida cancelada.</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictCancelUploadConfirmation" xml:space="preserve">
+    <value>Está seguro que desea cancelar la subida?</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictRemoveFile" xml:space="preserve">
+    <value>Eliminar archivo</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictMaxFilesExceeded" xml:space="preserve">
+    <value>No podés subir más archivos.</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictInvalidFileType" xml:space="preserve">
+    <value>No podés subir archivos de este tipo.</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictFileTooBig" xml:space="preserve">
+    <value>El archivo es muy grande ({{filesize}}MiB). El máximo permitido es: {{maxFilesize}}MiB.</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictImportSucceededTitle" xml:space="preserve">
+    <value>Listo!</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictImportSucceededMessage" xml:space="preserve">
+    <value>La importación se realizó con éxito.</value>
+  </data>
+    <data name="WebApp.WebTools.ExcelImportOptions.DictImportFailedTitle" xml:space="preserve">
+    <value>Ups</value>
+  </data>
+    <!-- End ExcelImportOptions -->
+    <!-- End WebTools -->
+    <!-- Views -->
+    <!-- Category -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Category.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Category.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Category.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.Category.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de categorías</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.Category.Index.BtnNew" xml:space="preserve">
+    <value>Nueva categoría</value>
+  </data>
+    <data name="WebApp.Views.Category.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Category.Index.TableColDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Views.Category.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Category -->
+    <!-- Genre -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Genero.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Genero.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Genero.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.Genero.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de generos</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.Genero.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo genero</value>
+  </data>
+    <data name="WebApp.Views.Genero.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Genero.Index.TableColDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Views.Genero.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Genre -->
+    <!-- HolidayType -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.HolidayType.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.HolidayType.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.HolidayType.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.HolidayType.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de tipos de días no laborales</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.HolidayType.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo tipo de día no laboral</value>
+  </data>
+    <data name="WebApp.Views.HolidayType.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.HolidayType.Index.TableColDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Views.HolidayType.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End HolidayType -->
+    <!-- Holiday -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Holiday.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Holiday.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Holiday.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+    <data name="WebApp.Views.Holiday.CreateOrEdit.PlaceholderSelectReason" xml:space="preserve">
+    <value>Por favor, seleccione un motivo</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.Holiday.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de días no laborales</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.Holiday.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo día no laboral</value>
+  </data>
+    <data name="WebApp.Views.Holiday.Index.BtnExportAll" xml:space="preserve">
+    <value>Exportar todo</value>
+  </data>
+    <data name="WebApp.Views.Holiday.Index.BtnExportFiltered" xml:space="preserve">
+    <value>Exportar por filtro</value>
+  </data>
+    <data name="WebApp.Views.Holiday.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Holiday.Index.TableColDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Views.Holiday.Index.TableColReason" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
+    <data name="WebApp.Views.Holiday.Index.TableColUsers" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+    <data name="WebApp.Views.Holiday.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Holiday -->
+    <!-- Home -->
+    <!-- Privacy -->
+    <data name="WebApp.Views.Home.Privacy.Detail" xml:space="preserve">
+    <value>Use esta página para detallar su Política de privacidad.</value>
+  </data>
+  <data name="WebApp.Views.Home.Index.Title" xml:space="preserve">
+    <value>Bienvenido a Preguntados</value>
+  </data>
+    <!-- End Privacy -->
+    <!-- End Home -->
+    <!-- Product -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Product.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.BtnAddFeature" xml:space="preserve">
+    <value>Agregar característica</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.BtnDeleteFeature" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.PlaceholderSelectCategory" xml:space="preserve">
+    <value>Por favor, seleccione una categoría</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.TableFeatureName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.TableFeatureDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Views.Product.CreateOrEdit.TableFeatureActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.Product.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de Productos</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.Product.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo Producto</value>
+  </data>
+    <data name="WebApp.Views.Product.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Product.Index.TableColDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Views.Product.Index.TableColPrice" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+    <data name="WebApp.Views.Product.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Product -->
+    <!-- Theme -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Theme.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Theme.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Theme.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <data name="WebApp.Views.Theme.CreateOrEdit.BtnDeleteFeature" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+    <data name="WebApp.Views.Theme.CreateOrEdit.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Theme.CreateOrEdit.ColorLabel" xml:space="preserve">
+    <value>Color</value>
+  </data>
+    <data name="WebApp.Views.Theme.CreateOrEdit.QuestionQuantityLabel" xml:space="preserve">
+    <value>Cantidad de preguntas</value>
+  </data>
+    <data name="WebApp.Models.ThemeViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre del Tema</value>
+  </data>
+  <data name="WebApp.Models.ThemeViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre del tema es requerido</value>
+  </data>
+    <data name="WebApp.Models.ThemeViewModel.ColorLabel" xml:space="preserve">
+    <value>Color del Tema</value>
+  </data>
+    <data name="WebApp.Models.ThemeViewModel.QuestionQuantityLabel" xml:space="preserve">
+    <value>Cantidad de preguntas</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.Theme.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de temas</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.Theme.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo Tema</value>
+  </data>
+    <data name="WebApp.Views.Theme.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Theme.Index.TableColColor" xml:space="preserve">
+    <value>Color</value>
+  </data>
+    <data name="WebApp.Views.Theme.Index.TableColQuestionQuantity" xml:space="preserve">
+    <value>Cantidad de preguntas</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Theme -->
+      <!-- Question -->
+  <!-- Index -->
+  <data name="WebApp.Views.Question.Index.BtnNew" xml:space="preserve">
+    <value>Nueva Pregunta</value>
+  </data>
+  <data name="WebApp.Views.Question.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="WebApp.Views.Question.Index.TableColTheme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="WebApp.Views.Question.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <!-- End Index -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Question.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Question.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Question.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <data name="WebApp.Views.Question.CreateOrEdit.BtnDeleteFeature" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+    <data name="WebApp.Models.QuestionViewModel.NameLabel" xml:space="preserve">
+    <value>Título de la pregunta</value>
+  </data>
+    <data name="WebApp.Models.QuestionViewModel.ThemeLabel" xml:space="preserve">
+    <value>Elija un tema</value>
+  </data>
+  <data name="WebApp.Views.Question.CreateOrEdit.PlaceholderSelectQuestion" xml:space="preserve">
+    <value>Elija un tema</value>
+  </data>
+  <data name="WebApp.Models.QuestionViewModel.NameRequired" xml:space="preserve">
+    <value>Este campo es requerido</value>
+  </data>
+
+
+  <!-- End CreateOrEdit -->
+    <!-- User -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.User.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.User.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.User.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <data name="WebApp.Views.User.CreateOrEdit.PlaceholderSelectTenant" xml:space="preserve">
+    <value>Por favor, seleccione una organización</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.User.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de Usuarios</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.User.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo Usuario</value>
+  </data>
+    <data name="WebApp.Views.User.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.User.Index.TableColLastName" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Views.User.Index.TableColEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Views.User.Index.TableColPhone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+    <data name="WebApp.Views.User.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End User -->
+    <!-- BackOfficeUser -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.BackOfficeUser.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.CreateOrEdit.PlaceholderSelectTenant" xml:space="preserve">
+    <value>Por favor, seleccione una organización</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.BackOfficeUser.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de Usuarios</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.BackOfficeUser.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo Usuario</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.Index.TableColLastName" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.Index.TableColEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.Index.TableColPhone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.Index.TableColJobTitle" xml:space="preserve">
+    <value>Puesto de trabajo</value>
+  </data>
+    <data name="WebApp.Views.BackOfficeUser.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End BackOfficeUser -->
+    <!-- FrontUser -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.FrontUser.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.CreateOrEdit.PlaceholderSelectTenant" xml:space="preserve">
+    <value>Por favor, seleccione una organización</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.FrontUser.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Lista de Usuarios</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.FrontUser.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo Usuario</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.Index.TableColLastName" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.Index.TableColEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.Index.TableColPhone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.Index.TableColBirthdate" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
+    <data name="WebApp.Views.FrontUser.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End FrontUser -->
+    <!-- Shared -->
+    <!-- Error -->
+    <data name="WebApp.Views.Shared.Error.BtnBack" xml:space="preserve">
+    <value>Volver a Inicio</value>
+  </data>
+    <!-- End Error -->
+    <!-- _LoginPartial -->
+    <data name="WebApp.Views.Shared._LoginPartial.BtnAccount" xml:space="preserve">
+    <value>Configuración de cuenta</value>
+  </data>
+    <data name="WebApp.Views.Shared._LoginPartial.BtnLogout" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+    <data name="WebApp.Views.Shared._LoginPartial.BtnRegister" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+    <data name="WebApp.Views.Shared._LoginPartial.BtnLogin" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+    <data name="WebApp.Views.Shared._LoginPartial.NotificationsTitle" xml:space="preserve">
+    <value>Notificaciones</value>
+  </data>
+    <data name="WebApp.Views.Shared._LoginPartial.BtnAllNotifications" xml:space="preserve">
+    <value>Ver todas las notificaciones</value>
+  </data>
+    <data name="WebApp.Views.Shared._LoginPartial.Privacy" xml:space="preserve">
+    <value>Privacidad</value>
+  </data>
+    <!-- End _LoginPartial -->
+    <!-- _Navbar -->
+    <data name="WebApp.Views.Shared._Navbar.LogoText" xml:space="preserve">
+    <value>Ignite</value>
+  </data>
+    <!-- End _Navbar -->
+    <!-- _Sidebar -->
+    <data name="WebApp.Views.Shared._Sidebar.BtnFrontUsers" xml:space="preserve">
+    <value>Usuarios de Front</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnBackOfficeUsers" xml:space="preserve">
+    <value>Usuarios de Backoffice</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnAccount" xml:space="preserve">
+    <value>Configuración de cuenta</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnProducts" xml:space="preserve">
+    <value>Productos</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnCategories" xml:space="preserve">
+    <value>Categorías</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnCharts" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnHolidayType" xml:space="preserve">
+    <value>Tipos de días no laborales</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnHoliday" xml:space="preserve">
+    <value>Días no laborales</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnSettings" xml:space="preserve">
+    <value>Configuraciones</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnTenants" xml:space="preserve">
+    <value>Preguntas</value>
+  </data>
+    <data name="WebApp.Views.Shared._Sidebar.BtnEvents" xml:space="preserve">
+    <value>Temas</value>
+  </data>
+    <!-- End _Sidebar -->
+    <!-- _FileManager -->
+    <data name="WebApp.Views.Shared._FileManager.BtnDownload" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+    <data name="WebApp.Views.Shared._FileManager.NoFilesToDisplay" xml:space="preserve">
+    <value>No hay archivos para mostrar</value>
+  </data>
+    <!-- End _FileManager -->
+    <!-- _ExcelImport -->
+    <data name="WebApp.Views.Shared._ExcelImport.BtnImport" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+    <data name="WebApp.Views.Shared._ExcelImport.BtnClose" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+    <data name="WebApp.Views.Shared._ExcelImport.Title" xml:space="preserve">
+    <value>Importar Excel</value>
+  </data>
+    <!-- End _ExcelImport -->
+    <!-- End Shared -->
+    <!-- Tenant -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Tenant.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Tenant.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Tenant.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.Tenant.Details.BtnBack" xml:space="preserve">
+    <value>Volver a Organizaciones</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.Tenant.Index.BtnNew" xml:space="preserve">
+    <value>Nueva organización</value>
+  </data>
+    <data name="WebApp.Views.Tenant.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Tenant.Index.TableColCode" xml:space="preserve">
+    <value>Código</value>
+  </data>
+    <data name="WebApp.Views.Tenant.Index.TableColPath" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+    <data name="WebApp.Views.Tenant.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Tenant -->
+    <!-- Event -->
+    <!-- CreateOrEdit -->
+    <data name="WebApp.Views.Event.CreateOrEdit.BtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+    <data name="WebApp.Views.Event.CreateOrEdit.BtnCreate" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+    <data name="WebApp.Views.Event.CreateOrEdit.BtnUpdate" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+    <!-- End CreateOrEdit -->
+    <!-- Details -->
+    <data name="WebApp.Views.Event.Details.BtnBack" xml:space="preserve">
+    <value>Volver al listado de eventos</value>
+  </data>
+    <!-- End Details -->
+    <!-- Index -->
+    <data name="WebApp.Views.Event.Index.BtnNew" xml:space="preserve">
+    <value>Nuevo evento</value>
+  </data>
+    <data name="WebApp.Views.Event.Index.TableColName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Views.Event.Index.TableColDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Views.Event.Index.TableColDate" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+    <data name="WebApp.Views.Event.Index.TableColActions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Event -->
+    <!-- Charts -->
+    <!-- Index -->
+    <data name="WebApp.Views.Charts.Index.LineChartTitle" xml:space="preserve">
+    <value>Gráfico de líneas</value>
+  </data>
+    <data name="WebApp.Views.Charts.Index.BarChartTitle" xml:space="preserve">
+    <value>Gráfico de barras</value>
+  </data>
+    <data name="WebApp.Views.Charts.Index.PieChartTitle" xml:space="preserve">
+    <value>Gráfico de torta</value>
+  </data>
+    <data name="WebApp.Views.Charts.Index.DoughnutChartTitle" xml:space="preserve">
+    <value>Gráfico de dona</value>
+  </data>
+    <data name="WebApp.Views.Charts.Index.PolarChartTitle" xml:space="preserve">
+    <value>Gráfico Polar</value>
+  </data>
+    <data name="WebApp.Views.Charts.Index.RadarChartTitle" xml:space="preserve">
+    <value>Gráfico de radar</value>
+  </data>
+    <!-- End Index -->
+    <!-- End Charts -->
+    <!-- End Views -->
+    <!-- Models -->
+    <!-- EntityViewModel -->
+    <data name="WebApp.Models.EntityViewModel.IdLabel" xml:space="preserve">
+    <value>Id</value>
+  </data>
+    <!-- End EntityViewModel -->
+    <!-- ApplicationUserViewModel -->
+    <data name="WebApp.Models.ApplicationUserViewModel.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.PhoneNumberRequired" xml:space="preserve">
+    <value>El teléfono es requerido</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.RolesRequired" xml:space="preserve">
+    <value>Los roles son requeridos</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.NameStringLength" xml:space="preserve">
+    <value>El nombre debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.LastNameLabel" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.PhoneNumberLabel" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.RolesLabel" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.TenantsLabel" xml:space="preserve">
+    <value>Organización</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserViewModel.TenantRequired" xml:space="preserve">
+    <value>La organización es requerida</value>
+  </data>
+    <!-- End ApplicationUserViewModel -->
+    <!-- BackOfficeUserViewModel -->
+    <data name="WebApp.Models.BackOfficeUserViewModel.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.PhoneNumberRequired" xml:space="preserve">
+    <value>El teléfono es requerido</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.RolesRequired" xml:space="preserve">
+    <value>Los roles son requeridos</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.NameStringLength" xml:space="preserve">
+    <value>El nombre debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.LastNameLabel" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.PhoneNumberLabel" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.RolesLabel" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.TenantsLabel" xml:space="preserve">
+    <value>Organización</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.TenantRequired" xml:space="preserve">
+    <value>La organización es requerida</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserViewModel.JobTitleLabel" xml:space="preserve">
+    <value>Puesto de trabajo</value>
+  </data>
+    <!-- End BackOfficeUserViewModel -->
+    <!-- FrontUserViewModel -->
+    <data name="WebApp.Models.FrontUserViewModel.EmailRequired" xml:space="preserve">
+    <value>El email es requerido</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.LastNameRequired" xml:space="preserve">
+    <value>El apellido es requerido</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.PhoneNumberRequired" xml:space="preserve">
+    <value>El teléfono es requerido</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.RolesRequired" xml:space="preserve">
+    <value>Los roles son requeridos</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.EmailInvalid" xml:space="preserve">
+    <value>El formato de email no es válido.</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.NameStringLength" xml:space="preserve">
+    <value>El nombre debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.LastNameStringLength" xml:space="preserve">
+    <value>El apellido debe ser de {1} caracteres máximo.</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.LastNameLabel" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.PhoneNumberLabel" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.RolesLabel" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.TenantsLabel" xml:space="preserve">
+    <value>Organización</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.TenantRequired" xml:space="preserve">
+    <value>La organización es requerida</value>
+  </data>
+    <data name="WebApp.Models.FrontUserViewModel.BirthdateLabel" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
+    <!-- End FrontUserViewModel -->
+    <!-- CategoryViewModel -->
+    <data name="WebApp.Models.CategoryViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.CategoryViewModel.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida</value>
+  </data>
+    <data name="WebApp.Models.CategoryViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.CategoryViewModel.DescriptionLabel" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Models.CategoryViewModel.DescriptionStringLength" xml:space="preserve">
+    <value>La descripción debe tener entre {1} y {2} caracteres</value>
+  </data>
+    <!-- End CategoryViewModel -->
+    <!-- FeatureViewModel -->
+    <data name="WebApp.Models.FeatureViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.FeatureViewModel.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida</value>
+  </data>
+    <data name="WebApp.Models.FeatureViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.FeatureViewModel.DescriptionLabel" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Models.FeatureViewModel.DescriptionStringLength" xml:space="preserve">
+    <value>La descripción debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <!-- End FeatureViewModel -->
+    <!-- ProductViewModel -->
+    <data name="WebApp.Models.ProductViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.PriceRequired" xml:space="preserve">
+    <value>El precio es requerido</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.DescriptionLabel" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.PriceLabel" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.ReleaseDateLabel" xml:space="preserve">
+    <value>Fecha de entrega</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.CategoryLabel" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.FeaturesLabel" xml:space="preserve">
+    <value>Características</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.EditorsIdsLabel" xml:space="preserve">
+    <value>Editores</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.EditorsLabel" xml:space="preserve">
+    <value>Editores</value>
+  </data>
+    <data name="WebApp.Models.ProductViewModel.DescriptionStringLength" xml:space="preserve">
+    <value>La descripción debe ser de entre {2} y {1} caracteres.</value>
+  </data>
+    <!-- End ProductViewModel -->
+    <!-- HolidayTypeViewModel -->
+    <data name="WebApp.Models.HolidayTypeViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.HolidayTypeViewModel.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida</value>
+  </data>
+    <data name="WebApp.Models.HolidayTypeViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.HolidayTypeViewModel.DescriptionLabel" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Models.HolidayTypeViewModel.DescriptionStringLength" xml:space="preserve">
+    <value>La descripción debe tener entre {1} y {2} caracteres</value>
+  </data>
+    <!-- End HolidayTypeViewModel -->
+    <!-- HolidayViewModel -->
+    <data name="WebApp.Models.HolidayViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.DescriptionLabel" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.DescriptionStringLength" xml:space="preserve">
+    <value>La descripción debe tener entre {2} y {1} caracteres</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.MessageLabel" xml:space="preserve">
+    <value>Mensaje</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.MessageStringLength" xml:space="preserve">
+    <value>El mensaje debe tener un máximo de {1} caracteres</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.StartDateRequired" xml:space="preserve">
+    <value>Fecha desde es requerido</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.StartDateLabel" xml:space="preserve">
+    <value>Fecha desde</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.EndDateLabel" xml:space="preserve">
+    <value>Fecha hasta</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.ReasonLabel" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.UsersIdsLabel" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.UsersLabel" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+    <data name="WebApp.Models.HolidayViewModel.ReasonRequired" xml:space="preserve">
+    <value>El motivo es requerido</value>
+  </data>
+    <!-- End HolidayViewModel -->
+    <!-- TenantViewModel -->
+    <data name="WebApp.Models.TenantViewModel.CodeRequired" xml:space="preserve">
+    <value>El código es requerido</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.CodeLabel" xml:space="preserve">
+    <value>Código</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.CodeRegexError" xml:space="preserve">
+    <value>El código solo puede contener letras, números, guiones y guiones bajos</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.DescriptionRequired" xml:space="preserve">
+    <value>La Descripción es requerida</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.DescriptionLabel" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.DescriptionStringLength" xml:space="preserve">
+    <value>La Descripción debe tener entre {1} y {2} caracteres.</value>
+  </data>
+    <data name="WebApp.Models.TenantViewModel.PathLabel" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+    <!-- End TenantViewModel -->
+    <!-- EventViewModel -->
+    <data name="WebApp.Models.EventViewModel.NameRequired" xml:space="preserve">
+    <value>El nombre es requerido</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.NameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.DescriptionRequired" xml:space="preserve">
+    <value>La descripción es requerida</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.DescriptionLabel" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.DescriptionStringLength" xml:space="preserve">
+    <value>La Descripción debe tener entre {1} y {2} caracteres.</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.DurationLabel" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.DateRequired" xml:space="preserve">
+    <value>La fecha es requerida</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.DateLabel" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.TenantLabel" xml:space="preserve">
+    <value>Organización</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.TenantRequired" xml:space="preserve">
+    <value>La organización es requerida</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.FilesLabel" xml:space="preserve">
+    <value>Archivos</value>
+  </data>
+    <data name="WebApp.Models.EventViewModel.LocationLabel" xml:space="preserve">
+    <value>Ubicación</value>
+  </data>
+    <!-- End EventViewModel -->
+    <!-- AddressViewModel -->
+    <data name="WebApp.Models.AddressViewModel.CodeLabel" xml:space="preserve">
+    <value>Código</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.StreetLabel" xml:space="preserve">
+    <value>Calle</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.StreetNumberLabel" xml:space="preserve">
+    <value>Número de calle</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.PostalCodeLabel" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.LocalityLabel" xml:space="preserve">
+    <value>Localidad</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.CityLabel" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.CountryLabel" xml:space="preserve">
+    <value>País</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.LongitudeLabel" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+    <data name="WebApp.Models.AddressViewModel.LatitudeLabel" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+    <!-- End AddressViewModel -->
+    <!-- ProductRow -->
+    <data name="WebApp.Models.ProductRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar {0}?</value>
+  </data>
+    <data name="WebApp.Models.ProductRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <!-- End ProductRow -->
+    <!-- CategoryRow -->
+    <data name="WebApp.Models.CategoryRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar {0}?</value>
+  </data>
+    <data name="WebApp.Models.CategoryRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <!-- End CategoryRow -->
+    <!-- ApplicationUserRow -->
+    <data name="WebApp.Models.ApplicationUserRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar a {0} {1}?</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserRow.PasswordRecoveryConfirmationMessage" xml:space="preserve">
+    <value>El correo de recuperación ha sido enviado con éxito a {0}</value>
+  </data>
+    <data name="WebApp.Models.ApplicationUserRow.PasswordRecoveryLabel" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <!-- End ApplicationUserRow -->
+    <!-- BackOfficeUserRow -->
+    <data name="WebApp.Models.BackOfficeUserRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar a {0} {1}?</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserRow.PasswordRecoveryConfirmationMessage" xml:space="preserve">
+    <value>El correo de recuperación ha sido enviado con éxito a {0}</value>
+  </data>
+    <data name="WebApp.Models.BackOfficeUserRow.PasswordRecoveryLabel" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <!-- End BackOfficeUserRow -->
+    <!-- FrontUserRow -->
+    <data name="WebApp.Models.FrontUserRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar a {0} {1}?</value>
+  </data>
+    <data name="WebApp.Models.FrontUserRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <data name="WebApp.Models.FrontUserRow.PasswordRecoveryConfirmationMessage" xml:space="preserve">
+    <value>El correo de recuperación ha sido enviado con éxito a {0}</value>
+  </data>
+    <data name="WebApp.Models.FrontUserRow.PasswordRecoveryLabel" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+    <!-- End FrontUserRow -->
+    <!-- HolidayRow -->
+    <data name="WebApp.Models.HolidayRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar {0}?</value>
+  </data>
+    <data name="WebApp.Models.HolidayRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <!-- End HolidayRow -->
+    <!-- HolidayTypeRow -->
+    <data name="WebApp.Models.HolidayTypeRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar {0}?</value>
+  </data>
+    <data name="WebApp.Models.HolidayTypeRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <!-- End HolidayTypeRow -->
+    <!-- TenantRow -->
+    <data name="WebApp.Models.TenantRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar {0}?</value>
+  </data>
+    <data name="WebApp.Models.TenantRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Eliminado!</value>
+  </data>
+    <data name="WebApp.Models.TenantRow.LabelBtnAddChild" xml:space="preserve">
+    <value>Hijo</value>
+  </data>
+    <!-- End TenantRow -->
+    <!-- EventRow -->
+    <data name="WebApp.Models.EventRow.DeleteQuestionMessage" xml:space="preserve">
+    <value>Esta seguro que desea eliminar {0}?</value>
+  </data>
+    <data name="WebApp.Models.EventRow.DeleteConfirmationMessage" xml:space="preserve">
+    <value>Evento eliminado!</value>
+  </data>
+    <!-- End EventRow -->
+    <!-- End Models -->
+    <!-- Js -->
+    <data name="WebApp.Js.Datatables.LanguageProcessing" xml:space="preserve">
+    <value>Procesando...</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageLengthMenu" xml:space="preserve">
+    <value>Mostrar _MENU_ registros</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageZeroRecords" xml:space="preserve">
+    <value>No se encontraron resultados</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageEmptyTable" xml:space="preserve">
+    <value>Ningún dato disponible en esta tabla</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageInfo" xml:space="preserve">
+    <value>Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageInfoEmpty" xml:space="preserve">
+    <value>Mostrando registros del 0 al 0 de un total de 0 registros</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageInfoFiltered" xml:space="preserve">
+    <value>(filtrado de un total de _MAX_ registros)</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageSearch" xml:space="preserve">
+    <value>Buscar:</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageLoadingRecords" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguagePaginateFirst" xml:space="preserve">
+    <value>Primero</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguagePaginateLast" xml:space="preserve">
+    <value>Último</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguagePaginateNext" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguagePaginatePrevious" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageAriaSortAscending" xml:space="preserve">
+    <value>: Activar para ordenar la columna de manera ascendente</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LanguageAriaSortDescending" xml:space="preserve">
+    <value>: Activar para ordenar la columna de manera descendente</value>
+  </data>
+    <data name="WebApp.Js.Datatables.ButtonsPrint" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+    <data name="WebApp.Js.Datatables.LengthMenuAll" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+    <data name="WebApp.Js.Datatables.NoData" xml:space="preserve">
+    <value>Sin datos</value>
+  </data>
+    <!-- End Js -->
+    <!-- End Web App -->
+</root>

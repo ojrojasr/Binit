@@ -1,0 +1,56 @@
+@model List<Domain.Logic.DTOs.CardDTO>
+@using Binit.Framework
+@using Binit.Framework.Interfaces.DAL
+@using Microsoft.Extensions.Localization
+
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Statistics.Index
+@inject IStringLocalizer<SharedResources> localizer
+@inject IOperationContext operationContext
+
+<div class="row">
+	@{
+
+		foreach (var card in Model)
+		{
+			@await Component.InvokeAsync("CardRow", new { model = card })
+		}
+
+	}
+
+</div>
+
+
+<figure class="highcharts-figure">
+	<div id="container"></div>
+</figure>
+<br />
+<figure class="highcharts-figure">
+	<div id="containerBar"></div>
+
+</figure>
+<br />
+<figure class="highcharts-figure">
+	<div id="containerInverted"></div>
+
+</figure>
+
+<div class="text-right">
+	<button class="offset-10 col-md-2 rainbow-button btn" alt="@(localizer[Lang.Play])"
+			onclick="window.location.href='@Url.Action("Index","Game")'">
+	</button>
+</div>
+
+
+<link href="~/css/colors/rainbow.css" rel="stylesheet" />
+
+
+@section scripts {
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="~/js/views/statistics/statistics.js"></script>
+}

@@ -1,0 +1,138 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+name: 'Build .Net Core'
+
+trigger:
+- master
+
+pool:
+  name: Default
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+
+- task: DotNetCoreCLI@2
+  displayName: Clean
+  inputs:
+    command: custom
+    custom: clean
+    projects: '**/*.csproj'
+    arguments: '--configuration $(buildConfiguration)' # Update this to match your need
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: build
+    projects: '**/*.csproj'
+    arguments: '--configuration $(buildConfiguration)' # Update this to match your need
+
+- task: CmdLine@2
+  displayName: 'install efcore'
+  inputs:
+    script: |
+      cd Domain.Entities
+
+      echo creating new tool manifest
+
+      dotnet new tool-manifest
+
+      echo installing dotnet ef locally
+
+      dotnet tool install dotnet-ef --version 3.0.0-preview5.19227.1
+
+- task: CmdLine@2
+  displayName: 'add initial migration'
+  inputs:
+    script: |
+      cd Domain.Entities
+
+      echo creating Initial ModelDb migration
+
+      dotnet ef migrations add Initial --startup-project ..\WebApp\WebApp.csproj --output-dir Migrations\ModelDb --context ModelDbContext
+
+      echo creating Initial LogDb migration
+
+      dotnet ef migrations add Initial --startup-project ..\WebApp\WebApp.csproj --output-dir Migrations\LogDb --context LogDbContext
+  continueOnError: true
+
+# do this after other tasks such as building
+- task: DotNetCoreCLI@2
+  displayName: Testing
+  inputs:
+    command: test
+    projects: '**/Configuration.Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
+  continueOnError: true
+
+
+- task: CmdLine@2
+  displayName: 'migrations script'
+  inputs:
+    script: |
+      cd Domain.Entities
+
+      echo create migrations folder in artifact
+
+      mkdir $(build.artifactstagingdirectory)\migrations
+
+      echo creating ModelDbContext migration script
+
+      dotnet ef migrations script --output $(build.artifactstagingdirectory)\migrations\ModelDb.sql --context ModelDbContext --startup-project ..\WebApp\WebApp.csproj
+
+      echo creating LogDbContext migration script
+
+      dotnet ef migrations script -o $(build.artifactstagingdirectory)\migrations\LogDb.sql --context LogDbContext --startup-project ..\WebApp\WebApp.csproj
+  continueOnError: true
+
+
+- task: DotNetCoreCLI@2
+  displayName: BuildArtifact
+  inputs:
+    command: publish
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
+
+- task: DotNetCoreCLI@2
+  displayName: PublishE2ETests
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: '**/*.Tests.csproj'
+    arguments: '--configuration Release -o $(build.artifactstagingdirectory)/SeleniumTests'
+    zipAfterPublish: false
+    modifyOutputPath: false
+  continueOnError: true
+
+- task: PublishBuildArtifacts@1
+  displayName: PublishArtifact
+  inputs:
+   pathToPublish: $(Build.ArtifactStagingDirectory)
+   artifactName: IgniteArtifact
+
+- task: WorkItemUpdater@2
+  inputs:
+    workitemsSource: 'Build'
+    updateAssignedTo: 'Never'
+    workItemType: 'Bug'
+    workItemCurrentState: 'In Progress'
+    workItemState: 'Resolved'
+    addTags: '[Dev]'
+
+- task: WorkItemUpdater@2
+  inputs:
+    workitemsSource: 'Build'
+    updateAssignedTo: 'Never'
+    workItemType: 'User Story'
+    workItemCurrentState: 'In Progress'
+    workItemState: 'Done'
+    addTags: '[Dev]'
+    
+       

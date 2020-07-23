@@ -1,0 +1,27 @@
+﻿@page
+@model Disable2faModel
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.DisableTwoFA
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@{
+    ViewData["Title"] = localizer[Lang.Title];
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h1>@ViewData["Title"]</h1>
+
+<div class="alert alert-warning" role="alert">
+    <p>
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <strong>@localizer[Lang.ParagraphOne]</strong>
+    </p>
+    <p>
+        @localizer[Lang.ParagraphTwo] <a asp-page="./ResetAuthenticator">@localizer[Lang.ParagraphTwoButton]</a>
+    </p>
+</div>
+
+<div>
+    <form method="post" class="form-group">
+        <button class="btn btn-danger" type="submit">@localizer[Lang.SubmitButton]</button>
+    </form>
+</div>

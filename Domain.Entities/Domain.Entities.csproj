@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+	<!--<PublishTrimmed>true</PublishTrimmed>
+  	<PublishReadyToRun>true</PublishReadyToRun>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MigrationsModelDb\**" />
+    <EmbeddedResource Remove="MigrationsModelDb\**" />
+    <None Remove="MigrationsModelDb\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Binit.Framework\Binit.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\LogDb\" />
+    <Folder Include="Migrations\ModelDb\" />
+  </ItemGroup>
+
+</Project>

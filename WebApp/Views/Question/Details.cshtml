@@ -1,0 +1,62 @@
+@model WebApp.Models.QuestionViewModel;
+
+
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Question.Details
+@inject IStringLocalizer<SharedResources> localizer
+
+
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-textarea for-property="Theme" disabled></ignite-textarea>
+
+
+
+@{
+    if (!string.IsNullOrEmpty(Model.Theme))
+    {
+        <ignite-input for-property="Theme" disabled></ignite-input>
+    }
+
+
+
+}
+
+
+
+@{
+    if (Model.Answers != null && Model.Answers.Any())
+    {
+        <table id="answers-details" class="table w-100">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Theme</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 0;
+                    foreach (var answer in Model.Answers)
+                    {
+                        @await Component.InvokeAsync("AnswerRow", new { index = i, model = Model, editable = false });
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    }
+}
+
+
+
+
+<button type="button" class="btn btn-secondary mr-2"
+        onclick="window.location.href='@Url.Action("Index","Question")'">
+    @(localizer[Lang.BtnBack])
+</button>

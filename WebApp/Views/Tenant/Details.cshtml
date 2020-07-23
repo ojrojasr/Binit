@@ -1,0 +1,14 @@
+@model WebApp.Models.TenantViewModel;
+
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Tenant.Details;
+@inject IStringLocalizer<SharedResources> localizer
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-input for-property="Code" disabled></ignite-input>
+<ignite-textarea for-property="Description" disabled></ignite-textarea>
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","Tenant")'">@(localizer[Lang.BtnBack])</button>

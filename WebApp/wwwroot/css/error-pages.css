@@ -1,0 +1,57 @@
+/*
+Template Name: Admin pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*
+Template Name: Admin Pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*Theme Colors*/
+/*bootstrap Color*/
+/*Light colors*/
+/*Normal Color*/
+/*Extra Variable*/
+/*******************
+Error Page
+******************/
+.error-box {
+    height: 100%;
+    position: fixed;
+    background: url(../../../images/error.png) no-repeat center center #fff;
+    width: 100%;
+}
+
+    .error-box .footer {
+        width: 100%;
+        left: 0px;
+        right: 0px;
+    }
+
+.error-body {
+    padding-top: 10%;
+}
+
+    .error-body h1 {
+        font-size: 60px;
+        font-weight: 900;
+        text-shadow: 4px 4px 0 #ffffff, 6px 6px 0 #263238;
+        line-height: 60px;
+        margin-bottom: 40px;
+    }
+
+    .error-body #details {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+    }
+
+@media(max-width: 767px) {
+    .error-body h1 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+}

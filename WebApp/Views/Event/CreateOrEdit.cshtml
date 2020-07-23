@@ -1,0 +1,44 @@
+@model WebApp.Models.EventViewModel;
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+@using WebApp.WebTools;
+@using Newtonsoft.Json;
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Event.CreateOrEdit;
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var action = ViewData["Action"] as string;
+    var submitLabel = action == "Create" ? localizer[Lang.BtnCreate] : localizer[Lang.BtnUpdate];
+}
+
+@{
+	@await Html.PartialAsync("_FileManager", Model.Files, 
+		new FileManagerOptions(ViewData, localizer) { 
+			UploadEnabled = true,
+			MaxFileSize = 2,
+			MaxFiles = 3,
+			ParentFormId = "event-form",
+			PropertyName = "FilesIds",
+			AcceptedMimeTypes = "image/jpeg,image/jpeg,image/png"
+		}
+	);
+}
+
+<form id="event-form" class="floating-labels" method="POST" action="@action">
+    <input type="hidden" asp-for="Id"/>
+	<input type="hidden" asp-for="LocationId"/>
+    
+    <ignite-input for-property="Name"></ignite-input>
+	<ignite-textarea for-property="Description"></ignite-textarea>
+	<ignite-input for-property="Duration" type="number" min="0"></ignite-input>
+	<ignite-date-picker for-property="Date"></ignite-date-picker>
+
+	<!-- Ignite Address -->
+	<ignite-address for-property="Location"></ignite-address>
+
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mr-2"
+        onclick="window.location.href='@Url.Action("Index","Event")'">@localizer[Lang.BtnCancel]</button>
+        <button type="submit" class="btn btn-themecolor">@submitLabel</button>
+    </div>
+</form>

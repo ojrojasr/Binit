@@ -1,0 +1,66 @@
+{
+    "LOGIN_PAGE":
+    {
+        "LOGIN" : "Login",
+        "EMAIL" : "Email",
+        "PASSWORD" : "Password",
+        "KEEP_ME_LOGGED_IN" : "Keep my logged-in",
+        "CREATE_ACCOUNT" : "Create an account"
+    },
+    "PRODUCTS_PAGE":
+    {
+        "PRODUCTS" : "Products"
+    },
+    "HOME_PAGE":
+    {
+        "HOME" : "Home",
+        "IGNITE_DESCRIPTION" : "Binit Ignite is designed to fuel the next generation of Binit projects. <br /> For more information go to the Wiki, there you will discover lots of fun things to do, with the best programming practices included."
+    },
+    "LIST_PAGE":
+    {
+        "LIST": "List"
+    },
+    "MENU":
+    {
+        "MENU": "Menu",
+        "LOGOUT": "Logout"
+    },
+    "REGISTER_PAGE":
+    {
+        "REGISTER": "Register",
+        "NAME": "Name",
+        "LASTNAME": "Lastname",
+        "EMAIL": "Email",
+        "PASSWORD": "Password",
+        "CONFIRM_PASSWORD": "Confirm password"
+    },
+    "VALIDATIONS":
+    {
+        "REQUIRED": "is a required field",
+        "INCORRECT_FORMAT": "hasn't the correct format",
+        "PASSWORD_REQUIREMENTS": "must have between 8 and 16 characters, at least one digit, al least one lower case, at least one upper case and at least one non-alphanumeric character",
+        "PASSWORDS_MATCHING": "Passwords don't match"
+    },
+    "LOADING_STATES": 
+    {
+        "LOGGING_IN": "Logging in...",
+        "REGISTERING": "Registering...",
+		"LOGGING_OUT": "Logging out...",
+		"LOADING": "Loading..."
+    },
+    "ERRORS":
+    {
+        "GENERIC": "Something went wrong",
+        "UNAUTHORIZED": "Unauthorized",
+        "NO_INTERNET_CONNECTION": "No Internet Connection",
+        "IN_LOGIN": "Login failed."
+    },
+    "SUCCESS":
+    {
+        "TITLE": "Success!",
+        "REGISTER": "User registered succesfully"
+	},
+	"SOCIAL_AUTH": {
+		"COMPLETING": "Completing social auth..."
+	}
+}

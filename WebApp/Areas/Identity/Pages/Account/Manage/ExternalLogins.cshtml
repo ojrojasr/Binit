@@ -1,0 +1,79 @@
+﻿@page
+@model ExternalLoginsModel
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.ExternalLogins
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@{
+    ViewData["Title"] = localizer[Lang.Title];
+    ViewData["ActivePage"] = ManageNavPages.ExternalLogins;
+	Layout = "/Areas/Identity/Pages/Account/Manage/_Layout.cshtml";
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+@if (Model.CurrentLogins?.Count > 0)
+{
+    <h4>@localizer[Lang.Subtitle]</h4>
+    <table class="table">
+        <tbody>
+            @foreach (var login in Model.CurrentLogins)
+            {
+                <tr>
+                    <td>@login.ProviderDisplayName</td>
+                    <td>
+                        @if (Model.ShowRemoveButton)
+                        {
+                            <form id="remove-login" asp-page-handler="RemoveLogin" method="post">
+                                <div>
+                                    <input asp-for="@login.LoginProvider" name="LoginProvider" type="hidden" />
+                                    <input asp-for="@login.ProviderKey" name="ProviderKey" type="hidden" />
+                                    <button type="submit" class="btn btn-primary" title="Remove this @login.ProviderDisplayName login from your account">@localizer[Lang.SubmitButton]</button>
+                                </div>
+                            </form>
+                        }
+                        else
+                        {
+                            @: &nbsp;
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@if (Model.OtherLogins?.Count > 0)
+{
+    <h4>@localizer[Lang.AddAnotherService]</h4>
+    <hr />
+    <form id="link-login-form" asp-page-handler="LinkLogin" method="post" class="form-horizontal">
+        <div id="socialLoginList">
+            <p>
+                @foreach (var provider in Model.OtherLogins)
+                {
+					switch (provider.Name)
+					{
+						case "Google":
+							<text>
+								<button type="submit" href="javascript:void(0)" name="provider" value="@provider.Name" class="btn btn-googleplus" data-toggle="tooltip" title="@localizer[Lang.WithGoogle]">
+									<i aria-hidden="true" class="fab fa-google-plus-g"></i>
+								</button>
+							</text>
+							break;
+						case "Facebook":
+							<text>
+								<button type="submit" href="javascript:void(0)"  name="provider" value="@provider.Name" class="btn btn-facebook" data-toggle="tooltip" title="@localizer[Lang.WithFacebook]">
+									<i aria-hidden="true" class="fab fa-facebook"></i>
+								</button>
+							</text>
+							break;
+						case "Twitter":
+							<text>
+								<button type="submit" href="javascript:void(0)" name="provider" value="@provider.Name" class="btn btn-twitter" data-toggle="tooltip" title="@localizer[Lang.WithTwitter]">
+									<i aria-hidden="true" class="fab fa-twitter"></i>
+								</button>
+							</text>            
+							break;
+					}
+                }
+            </p>
+        </div>
+    </form>
+}

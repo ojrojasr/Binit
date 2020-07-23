@@ -1,0 +1,12 @@
+﻿@page
+@model LockoutModel
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.Lockout
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@{
+    ViewData["Title"] = @localizer[Lang.Title];
+}
+
+<header>
+    <h1 class="text-danger">@ViewData["Title"]</h1>
+    <p class="text-danger">@localizer[Lang.Subtitle]</p>
+</header>

@@ -1,0 +1,53 @@
+@using Binit.Framework
+@using Binit.Framework.Interfaces.DAL
+@using Microsoft.Extensions.Localization
+@using Binit.Framework.Constants.Authentication
+@using WebApp.WebTools
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Holiday.Index
+@inject IStringLocalizer<SharedResources> localizer
+@inject IOperationContext operationContext
+
+@if (operationContext.UserIsInAnyRole(Roles.BackofficeSuperAdministrator, Roles.BackofficeHolidayAdministrator))
+{
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-themecolor mr-2" onclick="location.href='@Url.Action("Create", "Holiday")'">
+            <i class="fa fa-plus"></i>
+            @(localizer[Lang.BtnNew])
+        </button>
+
+		@await Html.PartialAsync("_ExcelImport", null,
+			new ExcelImportOptions(ViewData, localizer) { 
+				MaxFileSize = 2,
+				ActionUrl = Url.Action("ImportExcel", "Holiday")
+			}
+		)
+
+		<!-- Executes request directly to HolidayController/ExportExcel (via asp-action="ExportExcel") -->
+		<a asp-action="ExportExcel" class="btn btn-primary excel m-l-5">
+            <i class="fa fa-file-excel m-l-5"></i>
+            @(localizer[Lang.BtnExportAll])
+        </a>
+
+		<!-- Executes on click event (check js/holiday/index.js) -->
+		<button type="button" id="btn-export-filtered" class="btn btn-primary excel m-l-5">
+            <i class="fa fa-file-excel m-l-5"></i>
+            @(localizer[Lang.BtnExportFiltered])
+        </button>
+    </div>
+}
+
+<ignite-table get-url="@Url.Action("GetAll", "Holiday")">
+	<ignite-column name="name" priority="1">@(localizer[Lang.TableColName])</ignite-column>
+	<ignite-column name="description">@(localizer[Lang.TableColDescription])</ignite-column>
+	<ignite-column name="reason">@(localizer[Lang.TableColReason])</ignite-column>
+	<ignite-column name="users">@(localizer[Lang.TableColUsers])</ignite-column>
+</ignite-table>
+
+@section scripts {
+	<!-- Script required to localize datatable resources -->
+	<script>
+		var datatableResources = @Json.Serialize(ViewData["DatatableResources"]);
+	</script>
+	<script src="@Url.Content("~/js/views/holiday/index.js")" type="text/javascript"></script>
+}

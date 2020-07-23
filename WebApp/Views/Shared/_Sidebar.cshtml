@@ -1,0 +1,65 @@
+@using WebApp.UIComponents.SidenavItem
+
+@using Binit.Framework.Interfaces.DAL
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Binit.Framework.Constants.Authentication
+@inject IStringLocalizer<SharedResources> localizer
+@inject IOperationContext operationContext
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Shared._Sidebar
+
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav d-flex flex-column justify-content-between">
+            @if (User.Identity.IsAuthenticated)
+            {
+			<ul class="sidebarnav top flex-grow-1">
+				<!-- Checkout https://iconsmind.com/view_icons/ to see what icons you can use -->
+				@(await Html.RenderComponentAsync<SidenavItem>(
+					RenderMode.Static,
+					new SidenavItem(
+						title: localizer[Lang.BtnPlay],
+						icon: "fa fa-gamepad",
+						link: Url.Action("Index", "Game"),
+						visible: operationContext.UserIsInAnyRole(Roles.BackofficeSuperAdministrator, Roles.BackofficeProductAdministrator, Roles.BackofficeProductUser, Roles.FrontSuperAdministrator, Roles.FrontProductAdministrator, Roles.FrontProductUser)
+					)
+				))
+				@(await Html.RenderComponentAsync<SidenavItem>(
+					RenderMode.Static,
+					new SidenavItem(
+						title: localizer[Lang.BtnStatistics],
+						icon: "icon-Statistic",
+						link: Url.Action("Index", "Statistics"),
+						visible: operationContext.UserIsInAnyRole(Roles.BackofficeSuperAdministrator, Roles.BackofficeHolidayAdministrator, Roles.BackofficeHolidayUser, Roles.FrontSuperAdministrator, Roles.FrontHolidayAdministrator, Roles.FrontHolidayUser)
+					)
+				))
+				@if (this.operationContext.UserIsInRole(Roles.BackofficeSuperAdministrator))
+				{
+					@(await Html.RenderComponentAsync<SidenavItem>(
+					RenderMode.Static,
+					new SidenavItem(
+						title: localizer[Lang.BtnEvents],
+						icon: "fa fa-book",
+						link: Url.Action("Index", "Theme"),
+						visible: operationContext.UserIsInAnyRole(Roles.BackofficeSuperAdministrator, Roles.BackofficeHolidayAdministrator, Roles.BackofficeHolidayUser, Roles.FrontSuperAdministrator, Roles.FrontHolidayAdministrator, Roles.FrontHolidayUser)
+					)
+				))
+					@(await Html.RenderComponentAsync<SidenavItem>(
+					RenderMode.Static,
+					new SidenavItem(
+						title: localizer[Lang.BtnTenants],
+						icon: "fa fa-question",
+						link: Url.Action("Index", "Question"),
+						visible: operationContext.UserIsInAnyRole(Roles.BackofficeSuperAdministrator, Roles.BackofficeHolidayAdministrator, Roles.BackofficeHolidayUser, Roles.FrontSuperAdministrator, Roles.FrontHolidayAdministrator, Roles.FrontHolidayUser)
+					)
+				))
+				}
+
+			</ul>
+            }
+        </nav>
+    </div>
+</aside>

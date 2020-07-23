@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+	<!--<PublishTrimmed>true</PublishTrimmed>
+  	<PublishReadyToRun>true</PublishReadyToRun>-->
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>31d2e074-b17c-4db9-bbb4-f15342c2c3bd</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/57bf44fa-3317-4dff-b9ce-e14bec47f3f3/resourcegroups/BINIT/providers/microsoft.insights/components/Ignite</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/57bf44fa-3317-4dff-b9ce-e14bec47f3f3/resourceGroups/BINIT/providers/microsoft.insights/components/Ignite</ApplicationInsightsAnnotationResourceId>
+    <Today>$([System.DateTime]::Now)</Today>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BuildTimeStamp.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="BuildTimeStamp.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.8.0" />
+    <PackageReference Include="ElmahCore" Version="1.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc2" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Logic\Domain.Logic.csproj" />
+    <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj" />
+    <ProjectReference Include="..\Binit.Framework\Binit.Framework.csproj" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+    
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="echo $(today) &gt; &quot;$(ProjectDir)BuildTimeStamp.txt&quot;" />
+  </Target>
+
+</Project>

@@ -1,0 +1,12 @@
+@model WebApp.Models.ActorViewModel;
+
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Actor.Details;
+@inject IStringLocalizer<SharedResources> localizer
+
+<ignite-input for-property="Name" disabled></ignite-input>
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","Actor")'">@(localizer[Lang.BtnBack])</button>

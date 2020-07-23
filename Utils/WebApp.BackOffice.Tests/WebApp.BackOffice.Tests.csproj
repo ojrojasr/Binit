@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+	<!--<PublishTrimmed>true</PublishTrimmed>
+  	<PublishReadyToRun>true</PublishReadyToRun>-->
+
+    <IsPackable>false</IsPackable>
+    <PublishChromeDriver>true</PublishChromeDriver>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="test.runsettings" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="test.runsettings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="77.0.3865.4000" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.25.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Charts\" />
+    <Folder Include="Home\" />
+    <Folder Include="Tenant\" />
+    <Folder Include="Login\" />
+  </ItemGroup>
+</Project>

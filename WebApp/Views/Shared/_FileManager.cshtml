@@ -1,0 +1,88 @@
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Shared._FileManager
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@model List<WebApp.Models.FileViewModel>
+@using WebApp.WebTools
+
+@{
+	var fileManagerOptions = new FileManagerOptions(ViewData, localizer);
+}
+
+<div class="container">
+	<div class="row justify-content-center">
+		@{
+			if(Model == null || !Model.Any()) 
+			{
+				// No files to display
+				<p class="w-100 mb-4 p-4">@localizer[Lang.NoFilesToDisplay]</p>
+			}
+			else if (Model.Count > 1) 
+			{
+				// Multiple files to display
+				foreach (var file in Model) 
+				{
+					<div id="@file.Id.ToString()" class="col-sm-12 @(Model.Count >= 3 ? "col-lg-4" : "col-md-6") existing-file">
+						<div style="background-image:url('/File/Display/@file.Id')">
+							@if(fileManagerOptions.AllowRemoveFiles) 
+							{
+								<button data-id="@file.Id.ToString()" type="button" class="remove-file-btn">
+									<i class="fa fa-trash"></i>
+								</button>
+							}
+						</div>
+						<p class="mb-2">@file.Filename</p>
+						@if(fileManagerOptions.ShowDownloadButton) 
+						{
+							<a download="@file.Filename" href="/File/Download/@file.Id" 
+							target="_blank" class="btn btn-themecolor mb-4">@localizer[Lang.BtnDownload]</a>
+						}
+					</div>
+				}	
+			} 
+			else
+			{
+				// Only one File to display
+				var file = Model.First();
+				<div id="@file.Id.ToString()" class="w-50 existing-file">
+					<div style="background-image:url('/File/Display/@file.Id')">
+						@if(fileManagerOptions.AllowRemoveFiles) 
+						{
+							<button data-id="@file.Id.ToString()" type="button" class="remove-file-btn">
+								<i class="fa fa-trash"></i>
+							</button>
+						}
+					</div>
+					<p class="mb-2">@file.Filename</p>
+					@if(fileManagerOptions.ShowDownloadButton) 
+					{
+						<a download="@file.Filename" href="/File/Download/@file.Id" 
+						target="_blank" class="btn btn-themecolor mb-4">@localizer[Lang.BtnDownload]</a>
+					}
+				</div>
+			} 	
+		}
+	</div>
+
+	@if (fileManagerOptions.UploadEnabled) 
+	{
+		<div class="row">
+			<div class="col-md-12">
+				<form class="file-manager-dropzone dropzone" 
+					data-max-file-size="@fileManagerOptions.MaxFileSize"
+					data-upload-url="/File/Upload"
+					data-max-files="@fileManagerOptions.MaxFiles"
+					data-parent-form-id="@fileManagerOptions.ParentFormId"
+					data-property-name="@fileManagerOptions.PropertyName"
+					data-accepted-mime-types="@fileManagerOptions.AcceptedMimeTypes"
+					data-dict-default-message="@fileManagerOptions.Messages["DictDefaultMessage"]"
+					data-dict-cancel-upload="@fileManagerOptions.Messages["DictCancelUpload"]"
+					data-dict-upload-canceled="@fileManagerOptions.Messages["DictUploadCanceled"]"
+					data-dict-cancel-upload-confirmation="@fileManagerOptions.Messages["DictCancelUploadConfirmation"]"
+					data-dict-remove-file="@fileManagerOptions.Messages["DictRemoveFile"]"
+					data-dict-max-files-exceeded="@fileManagerOptions.Messages["DictMaxFilesExceeded"]"
+					data-dict-invalid-file-type="@fileManagerOptions.Messages["DictInvalidFileType"]"
+					data-dict-file-too-big="@fileManagerOptions.Messages["DictFileTooBig"]">
+				</form>
+			</div>
+		</div>
+	}
+</div>

@@ -1,0 +1,66 @@
+{
+    "LOGIN_PAGE": 
+    {
+        "LOGIN": "Iniciá sesión",
+        "EMAIL": "Correo electrónico",
+        "PASSWORD": "Contraseña",
+        "KEEP_ME_LOGGED_IN": "Mantener mi sesión activa",
+        "CREATE_ACCOUNT": "Crear una cuenta"
+    },
+    "PRODUCTS_PAGE":
+    {
+        "PRODUCTS": "Productos"
+    },
+    "HOME_PAGE":
+    {
+        "HOME": "Inicio",
+        "IGNITE_DESCRIPTION": "Binit Ignite está diseñado para impulsar la próxima generación de proyectos Binit. <br /> Para obtener más información, vaya a Wiki, allí descubrirá muchas cosas divertidas que hacer, con las mejores prácticas de programación incluidas."
+    },
+    "LIST_PAGE":
+    {
+        "LIST": "Lista"
+    },
+    "MENU":
+    {
+        "MENU": "Menú",
+        "LOGOUT": "Cerrar sesión"
+    },
+    "REGISTER_PAGE":
+    {
+        "REGISTER": "Registro",
+        "NAME": "Nombre",
+        "LASTNAME": "Apellido",
+        "EMAIL": "Correo electrónico",
+        "PASSWORD": "Contraseña",
+        "CONFIRM_PASSWORD": "Confirmar contraseña"
+    },
+    "VALIDATIONS":
+    {
+        "REQUIRED": "es un campo requerido",
+        "INCORRECT_FORMAT": "tiene un formato inválido",
+        "PASSWORD_REQUIREMENTS": "debe tener entre 8 u 16 caracteres, al menos un numero, al menos una minuscula, al menos una mayuscula y al menos un caracter no alfanumérico",
+        "PASSWORDS_MATCHING": "Las contraseñas no coinciden"
+    },
+    "LOADING_STATES": 
+    {
+        "LOGGING_IN": "Iniciando sesión...",
+        "REGISTERING": "Registrando...",
+		"LOGGING_OUT": "Cerrando sesión...",
+		"LOADING": "Cargando..."
+    },
+    "ERRORS":
+    {
+        "GENERIC": "Algo anduvo mal",
+        "UNAUTHORIZED": "No autorizado",
+        "NO_INTERNET_CONNECTION": "Sin internet",
+        "IN_LOGIN": "Falló el inicio de sesión."
+    },
+    "SUCCESS":
+    {
+        "TITLE": "¡Listo!",
+        "REGISTER": "Usuario registrado satisfactoriamente"
+	},
+	"SOCIAL_AUTH": {
+		"COMPLETING": "Completando autorización social..."
+	}   
+}

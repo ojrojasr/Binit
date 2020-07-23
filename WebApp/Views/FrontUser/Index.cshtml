@@ -1,0 +1,32 @@
+@using Binit.Framework
+@using Binit.Framework.Interfaces.DAL
+@using Microsoft.Extensions.Localization
+@using Binit.Framework.Constants.Authentication
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.FrontUser.Index
+@inject IStringLocalizer<SharedResources> localizer
+@inject IOperationContext operationContext
+
+@if (operationContext.UserIsInAnyRole(Roles.BackofficeSuperAdministrator, Roles.BackofficeFrontUserAdministrator))
+{
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-themecolor" onclick="location.href='@Url.Action("Create", "FrontUser")'">
+            <i class="fa fa-plus"></i>
+            @(localizer[Lang.BtnNew])
+        </button>
+    </div>
+}
+
+<ignite-table get-url="@Url.Action("GetAll", "FrontUser")">
+	<ignite-column name="name" priority="1">@(localizer[Lang.TableColName])</ignite-column>
+	<ignite-column name="lastName">@(localizer[Lang.TableColLastName])</ignite-column>
+	<ignite-column name="email">@(localizer[Lang.TableColEmail])</ignite-column>
+	<ignite-column name="phoneNumber">@(localizer[Lang.TableColPhone])</ignite-column>
+	<ignite-column name="birthdate">@(localizer[Lang.TableColBirthdate])</ignite-column>
+</ignite-table>
+
+@section scripts {
+	<!-- Script required to localize datatable resources -->
+	<script>
+		var datatableResources = @Json.Serialize(ViewData["DatatableResources"]);
+	</script>
+}

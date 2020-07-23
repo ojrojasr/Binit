@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <TestRunParameters>
+    <Parameter name="BaseUrl" value="https://back-ignite.binit.cloud/Identity/Account/Login"></Parameter>
+    <Parameter name="BaseUrlFront" value="https://ignite.binit.cloud/Identity/Account/Login"></Parameter>
+  </TestRunParameters>
+</RunSettings>

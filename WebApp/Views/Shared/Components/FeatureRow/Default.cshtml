@@ -1,0 +1,41 @@
+@model WebApp.Models.ProductViewModel;
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Product.CreateOrEdit
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+
+@{
+    int i = (int)ViewData["Index"];
+    var editable = (bool)ViewData["Editable"];
+}
+
+<tr id="feature-row-@i">
+    <input type="hidden" asp-for="@Model.Features[i].Id"/>
+    <td>
+        <div class="@(editable ? "form-group m-t-20" : "")" binit-validation-for="Features[i].Name"
+            binit-onerror-class="has-danger" binit-onsuccess-class="has-success">
+            <input disabled="@(editable ? null : "disabled")" type="text" asp-for="@Model.Features[i].Name" class="form-control" />
+            @if(editable){
+				<span class="bar"></span>
+				<label asp-for="@Model.Features[i].Name"></label>
+				<span asp-validation-for="@Model.Features[i].Name" class="form-control-feedback"></span>
+			}
+        </div>
+    </td>
+    <td>
+        <div class="@(editable ? "form-group m-t-20" : "")" binit-validation-for="Features[i].Description"
+            binit-onerror-class="has-danger" binit-onsuccess-class="has-success">
+            <input disabled="@(editable ? null : "disabled")" type="text" asp-for="@Model.Features[i].Description" class="form-control" />
+            @if(editable){
+				<span class="bar"></span>
+				<label asp-for="@Model.Features[i].Description"></label>
+				<span asp-validation-for="@Model.Features[i].Description" class="form-control-feedback"></span>
+			}
+        </div>
+    </td>
+    @if(editable){
+        <td class="actions">
+            <button type="button" onclick="$('#feature-row-@i').remove()" class="btn waves-effect waves-light btn-danger btn-sm mr-2 delete-feature">
+                <i class="fa fa-times"></i> @(localizer[Lang.BtnDeleteFeature])
+            </button>
+        </td>
+    }
+</tr>

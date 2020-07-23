@@ -1,0 +1,29 @@
+@model WebApp.Models.BackOfficeUserViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.BackOfficeUser.Details
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var roles = ViewData["Roles"] as List<SelectListItem>;
+}
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-input for-property="LastName" disabled></ignite-input>
+<ignite-input for-property="Email" disabled></ignite-input>
+<ignite-input for-property="PhoneNumber" disabled></ignite-input>
+
+<ignite-dropdown for-property="Roles" multiple="true" items="@roles" disabled></ignite-dropdown>
+
+<!-- Tenant -->
+@if (!string.IsNullOrEmpty(Model.Tenant)) 
+{
+    <ignite-input for-property="Tenant" disabled></ignite-input>
+}
+
+<ignite-input for-property="JobTitle" disabled></ignite-input>
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","BackOfficeUser")'">@(localizer[Lang.BtnBack])</button>

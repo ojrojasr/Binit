@@ -1,0 +1,29 @@
+@model WebApp.Models.FrontUserViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.FrontUser.Details
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var roles = ViewData["Roles"] as List<SelectListItem>;
+}
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-input for-property="LastName" disabled></ignite-input>
+<ignite-input for-property="Email" disabled></ignite-input>
+<ignite-input for-property="PhoneNumber" disabled></ignite-input>
+
+<ignite-dropdown for-property="Roles" multiple="true" items="@roles" disabled></ignite-dropdown>
+
+<!-- Tenant -->
+@if (!string.IsNullOrEmpty(Model.Tenant)) 
+{
+    <ignite-input for-property="Tenant" disabled></ignite-input>
+}
+
+<ignite-date-picker for-property="Birthdate" disabled></ignite-date-picker>
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","FrontUser")'">@(localizer[Lang.BtnBack])</button>

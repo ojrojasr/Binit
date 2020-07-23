@@ -1,0 +1,67 @@
+@model WebApp.Models.PeliculaViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Pelicula.CreateOrEdit
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var action = ViewData["Action"] as string;
+    var submitLabel = action == "Create" ? localizer[Lang.BtnCreate] : localizer[Lang.BtnUpdate];
+    var generos = ViewData["Generos"] as List<SelectListItem>;
+}
+
+    <form class="floating-labels" method="POST" action="@action">
+        <input type="hidden" asp-for="Id" />
+
+        <ignite-input for-property="Name"></ignite-input>
+        <ignite-textarea for-property="Description"></ignite-textarea>
+        <ignite-dropdown for-property="GeneroId"
+                         items="@generos"
+                         placeholder="@localizer[Lang.PlaceholderSelectCategory]">
+        </ignite-dropdown>
+        <ignite-dropdown for-property="ActoresIds"
+                         items="@Model.Actores"
+                         multiple="true"
+                         search-url="@Url.Action("SearchActores","Pelicula")">
+        </ignite-dropdown>
+
+        <button id="add-curiosidad" type="button" class="btn btn-primary mr-2 mb-2">
+            <i class="fa fa-plus"></i> @(localizer[Lang.BtnAddCuriosidad])
+        </button>
+        <table id="curiosidad-details" class="table w-100 details">
+            <thead>
+                <tr>
+                    <th>@(localizer[Lang.TableCuriosidadName])</th>
+                    <th>@(localizer[Lang.TableCuriosidadDescription])</th>
+                    <th>@(localizer[Lang.TableCuriosidadActions])</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 0;
+                    foreach (var curiosidad in Model.Curiosidades)
+                    {
+                        @await Component.InvokeAsync("CuriosidadRow", new { index = i, model = Model });
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+
+        <!-- Master Detail -->
+
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary mr-2"
+                    onclick="window.location.href='@Url.Action("Index","Pelicula")'">
+                @(localizer[Lang.BtnCancel])
+            </button>
+            <button type="submit" class="btn btn-themecolor">@submitLabel</button>
+        </div>
+    </form>
+
+
+@section Scripts {
+    <script src="@Url.Content("~/js/views/pelicula/createOrEdit.js")" type="text/javascript"></script>
+}

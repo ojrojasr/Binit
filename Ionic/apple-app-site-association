@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "L6QD45GZHN.com.binit.ignite",
+        "paths": [
+          "NOT \/api\/*",
+          "NOT \/",
+          "*"
+        ]
+      }
+    ]
+  }
+}

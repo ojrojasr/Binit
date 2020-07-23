@@ -1,0 +1,8 @@
+<ion-refresher slot="fixed" (ionStart)="handleStart($event)" (ionPull)="handlePull($event)" (ionRefresh)="handleRefresh($event)">
+  <ion-refresher-content
+    [pullingIcon]="pullingIcon"
+    [pullingText]="pullingText"
+    [refreshingSpinner]="refreshingSpinner"
+    [refreshingText]="refreshingText">
+  </ion-refresher-content>
+</ion-refresher>

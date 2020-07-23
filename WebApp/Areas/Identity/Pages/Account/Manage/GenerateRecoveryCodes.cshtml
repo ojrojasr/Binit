@@ -1,0 +1,28 @@
+﻿@page
+@model GenerateRecoveryCodesModel
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.GenerateRecoveryCodes
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@{
+    ViewData["Title"] = localizer[Lang.Title];
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h4>@ViewData["Title"]</h4>
+<div class="alert alert-warning" role="alert">
+    <p>
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <strong>@localizer[Lang.ParagraphOne]</strong>
+    </p>
+    <p>
+        @localizer[Lang.ParagraphTwo]
+    </p>
+    <p>
+        @localizer[Lang.ParagraphThree] <a asp-page="./ResetAuthenticator">@localizer[Lang.ParagraphThreeButton]</a>
+    </p>
+</div>
+<div>
+    <form method="post" class="form-group">
+        <button class="btn btn-danger" type="submit">@localizer[Lang.SubmitButton]</button>
+    </form>
+</div>

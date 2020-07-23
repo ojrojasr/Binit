@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Complete your account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Name: </ion-label>
+      <ion-input [(ngModel)]="data.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lastname: </ion-label>
+      <ion-input [(ngModel)]="data.lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input [(ngModel)]="data.email"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="finish()">Finish</ion-button>
+</ion-content>

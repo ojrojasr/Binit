@@ -1,0 +1,33 @@
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Shared._Navbar
+@inject IStringLocalizer<SharedResources> localizer
+
+<header class="topbar">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <!-- Logo -->
+        <div class="navbar-header d-flex justify-content-center">
+            <a class="navbar-brand" asp-controller="Game" asp-action="Index">
+                <!-- Logo icon -->
+                <b>
+                    <img src="~/images/logo.png" height="20" alt="homepage" class="light-logo" />
+                </b>
+                <!-- Logo text -->
+                <span class="text-white">
+                    @(localizer[Lang.LogoText])
+                </span> </a>
+        </div>
+        <div class="navbar-collapse">
+            <!-- toggle and nav items -->
+            <ul class="navbar-nav mr-auto">
+                <!-- This is  -->
+                <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu ti-menu"></i></a> </li>
+                <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+            </ul>
+
+            <!-- Login Nav -->
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
+</header>

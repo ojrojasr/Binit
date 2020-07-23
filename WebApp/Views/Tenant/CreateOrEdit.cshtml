@@ -1,0 +1,35 @@
+@model WebApp.Models.TenantViewModel;
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Tenant.CreateOrEdit;
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var action = ViewData["Action"] as string;
+    var submitLabel = action == "Create" ? localizer[Lang.BtnCreate] : localizer[Lang.BtnUpdate];
+}
+
+<form class="floating-labels" method="POST" action="@action">
+    <input type="hidden" asp-for="Id"/>
+
+    <!-- Read only fields date on edit mode -->
+    @if (action == "Edit")
+    {
+		<ignite-input for-property="Code" disabled></ignite-input>
+        <input type="hidden" asp-for="Code"/>
+    }
+    else 
+    {    
+		<ignite-input for-property="Code"></ignite-input>
+    }
+
+    <ignite-input for-property="Name"></ignite-input>
+	<ignite-textarea for-property="Description"></ignite-textarea>
+
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mr-2"
+        onclick="window.location.href='@Url.Action("Index","Tenant")'">@(localizer[Lang.BtnCancel])</button>
+        <button type="submit" class="btn btn-themecolor">@(submitLabel)</button>
+    </div>
+</form>

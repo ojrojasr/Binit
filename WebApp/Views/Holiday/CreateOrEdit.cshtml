@@ -1,0 +1,39 @@
+@model WebApp.Models.HolidayViewModel;
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Holiday.CreateOrEdit;
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var action = ViewData["Action"] as string;
+    var submitLabel = action == "Create" ? localizer[Lang.BtnCreate] : localizer[Lang.BtnUpdate];
+    var reasons = ViewData["Reasons"] as List<SelectListItem>;
+}
+
+<form class="floating-labels" method="POST" action="@action">
+    <input type="hidden" asp-for="Id"/>
+    
+	<ignite-input for-property="Name"></ignite-input>
+	<ignite-textarea for-property="Description"></ignite-textarea>
+	<ignite-input for-property="Message"></ignite-input>
+	<ignite-date-picker for-property="StartDate"></ignite-date-picker>
+	<ignite-date-picker for-property="EndDate"></ignite-date-picker>
+	<ignite-dropdown 
+		for-property="ReasonId"
+		items="@reasons"
+		placeholder="@localizer[Lang.PlaceholderSelectReason]">
+	</ignite-dropdown>
+	<ignite-dropdown 
+		for-property="UsersIds"
+		search-url="@Url.Action("SearchUsers","Holiday")"
+		items="@Model.Users"
+		multiple="true">
+	</ignite-dropdown>
+
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mr-2"
+        onclick="window.location.href='@Url.Action("Index","Holiday")'">@localizer[Lang.BtnCancel]</button>
+        <button type="submit" class="btn btn-themecolor">@submitLabel</button>
+    </div>
+</form>

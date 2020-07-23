@@ -1,0 +1,71 @@
+@model List<WebApp.Models.ThemeViewModel>
+@using Binit.Framework
+@using Binit.Framework.Interfaces.DAL
+@using Microsoft.Extensions.Localization
+@using Binit.Framework.Constants.Authentication
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Game.Index
+@inject IStringLocalizer<SharedResources> localizer
+@inject IOperationContext operationContext
+
+	<tbody class="text-center">
+		@{
+			<div class="text-center">
+				<h3>@(localizer[Lang.Play])</h3>
+			</div>
+			foreach (var theme in Model)
+			{
+				if (theme.Completed)
+				{
+					<div class="text-center">
+						<button style="border-color: @theme.Color" class="btn btn-light col-md-4" onclick="location.href='@Url.Action("Play", "Game")'+'/'+'@theme.Id'">
+							@theme.Name
+						</button>
+					</div>
+					<br />
+
+				}
+			}
+			int show = 0;
+			foreach (var theme in Model)
+			{
+
+				if (!theme.Completed)
+				{
+					if (show == 0)
+					{
+						<div class="text-center">
+							<h3>@(localizer[Lang.Soon])</h3>
+						</div>
+						show += 1;
+					}
+					<div class="text-center">
+						<button style="border-color:@theme.Color" class="btn btn-light col-md-4">
+							@theme.Name
+						</button>
+					</div>
+					<br />
+
+				}
+
+			}
+			<br />
+			<div class="col-md-12" style="height: 40px;">
+				<button class="col-md-4 rainbow-button btn" alt="@(localizer[Lang.Statistics])"
+						onclick="window.location.href='@Url.Action("Index","Statistics")'">
+				</button>
+			</div>
+		}
+
+	</tbody>
+
+
+	<link href="~/css/colors/rainbow.css" rel="stylesheet" />
+	@section scripts {
+		<!-- Script required to localize datatable resources -->
+
+		<script>
+
+		var datatableResources = @Json.Serialize(ViewData["DatatableResources"]);
+		</script>
+	}

@@ -1,0 +1,29 @@
+@using Binit.Framework
+@using Binit.Framework.Interfaces.DAL
+@using Microsoft.Extensions.Localization
+@using Binit.Framework.Constants.Authentication
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Tenant.Index
+@inject IStringLocalizer<SharedResources> localizer
+@inject IOperationContext operationContext;
+
+@if (operationContext.UserIsInRole(Roles.BackofficeSuperAdministrator))
+{
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-themecolor" onclick="location.href='@Url.Action("Create", "Tenant")'">
+            <i class="fa fa-plus"></i>
+            @(localizer[Lang.BtnNew])
+        </button>
+    </div>
+}
+
+<ignite-table get-url="@Url.Action("GetAll", "Tenant")">
+	<ignite-column name="code" priority="1">@(localizer[Lang.TableColCode])</ignite-column>
+	<ignite-column name="name">@(localizer[Lang.TableColName])</ignite-column>
+</ignite-table>
+
+@section scripts {
+	<!-- Script required to localize datatable resources -->
+	<script>
+		var datatableResources = @Json.Serialize(ViewData["DatatableResources"]);
+	</script>
+}

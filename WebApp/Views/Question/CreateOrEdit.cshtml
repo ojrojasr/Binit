@@ -1,0 +1,67 @@
+@model WebApp.Models.QuestionViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Question.CreateOrEdit
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    var action = ViewData["Action"] as string;
+    var submitLabel = action == "Create" ? localizer[Lang.BtnCreate] : localizer[Lang.BtnUpdate];
+    var themes = ViewData["Themes"] as List<SelectListItem>;
+}
+
+    <form class="floating-labels" method="POST" action="@action">
+        <input type="hidden" asp-for="Id" />
+
+        <ignite-input for-property="Name"></ignite-input>
+        <ignite-dropdown for-property="ThemeId"
+                         items="@themes"
+                         placeholder="@localizer[Lang.PlaceholderSelectQuestion]">
+        </ignite-dropdown>
+
+        <button id="add-answer" type="button" class="btn btn-primary mr-2 mb-2">
+            <i class="fa fa-plus"></i> @(localizer[Lang.BtnAddAnswer])
+        </button>
+        <div binit-validation-for="Answers"
+             binit-onerror-class="has-danger" binit-onsuccess-class="has-success">
+            <span asp-validation-for="@Model.Answers" class="form-control-feedback"></span>            
+        </div>
+        <table id="answer-details" class="table w-100 details">
+            <thead>
+                <tr>
+                    <th>@(localizer[Lang.TableAnswerName])</th>
+                    <th>@(localizer[Lang.TableAnswerIsCorrect])</th>
+                    <th>@(localizer[Lang.TableAnswerActions])</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 0;
+                    foreach (var answer in Model.Answers)
+                    {
+                        @await Component.InvokeAsync("AnswerRow", new { index = i, model = Model });
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+
+        <!-- Master Detail -->
+
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary mr-2"
+                    onclick="window.location.href='@Url.Action("Index","Question")'">
+                @(localizer[Lang.BtnCancel])
+            </button>
+            <button type="submit" class="btn btn-themecolor">@submitLabel</button>
+        </div>
+    </form>
+
+
+@section Scripts {
+    <script src="@Url.Content("~/js/views/question/createOrEdit.js")" type="text/javascript"></script>
+
+    
+}

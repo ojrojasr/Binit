@@ -1,0 +1,24 @@
+@model WebApp.Models.HolidayViewModel;
+
+@using Binit.Framework;
+@using Microsoft.Extensions.Localization;
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Holiday.Details;
+@inject IStringLocalizer<SharedResources> localizer
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-textarea for-property="Description" disabled></ignite-textarea>
+<ignite-input for-property="Message" disabled></ignite-input>
+<ignite-date-picker for-property="StartDate" disabled></ignite-date-picker>
+<ignite-date-picker for-property="EndDate" disabled></ignite-date-picker>
+<ignite-input for-property="Reason" disabled></ignite-input>
+
+
+@if (Model.Users != null & Model.Users.Any()) 
+{
+	<ignite-dropdown for-property="UsersIds" multiple="true" items="@Model.Users" disabled></ignite-dropdown>
+}
+
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","Holiday")'">@(localizer[Lang.BtnBack])</button>

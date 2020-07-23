@@ -1,0 +1,34 @@
+﻿@model ErrorViewModel
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Shared.Error
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+    Layout = "/Views/Shared/_ExternalLayout.cshtml";
+}
+
+<section id="wrapper" class="error-page">
+    <div class="error-box">
+        <div class="error-body text-center w-100 mx-auto">
+            <div id="details" class="w-75 mx-auto">
+                <h1 class="text-info">@(ViewData["Title"])</h1>
+                <h3 class="text-uppercase">@Model.Description</h3>
+
+                <a href="/Home/Index" class="btn btn-info btn-rounded waves-effect waves-light">@(localizer[Lang.BtnBack])</a> 
+
+                <!-- Display stack trace on dev environments (it'll be null on other envs)  -->
+                @if (!string.IsNullOrEmpty(Model.StackTrace)) 
+                {
+                    <h2>Stack trace</h2>
+                    <div>
+                        @Model.StackTrace
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </div>
+</section>

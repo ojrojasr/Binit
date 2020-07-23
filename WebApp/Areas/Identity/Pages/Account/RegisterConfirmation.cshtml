@@ -1,0 +1,25 @@
+﻿@page
+@model RegisterConfirmation
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.RegisterConfirmation
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@{
+    ViewData["Title"] = @localizer[Lang.Title];
+    Layout = "/Views/Shared/_ExternalLayout.cshtml";
+}
+
+<section id="wrapper">
+    <div class="login-register" style="background-image:url('@Url.Content("~/images/bg-register.jpg")');">
+        <div class="login-box card">
+            <div class="card-body text-center">
+                <a href="javascript:void(0)" class="text-center db">
+                    <img src="~/images/logo-black.png" class="mb-4" width="200" alt="Home" />
+                </a>
+                <h3 class="box-title">@ViewData["Title"]</h3>
+                <small>@localizer[Lang.Subtitle]</small>
+                <div class="form-group m-b-0 mt-4">
+                    <a asp-page="./Login" class="text-info m-l-5"><b>@localizer[Lang.BackToLogin]</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

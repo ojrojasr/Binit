@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon name="arrow-back" class="arrow-back" (click)="goBack()"></ion-icon>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>{{ "REGISTER_PAGE.REGISTER" | translate }}</ion-title>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <ion-item>
+      <ion-label position="floating">{{ "REGISTER_PAGE.NAME" | translate }}</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <span class="validation-error" [hidden]="!submit || !registerForm.get('name').hasError('required')">'{{ "REGISTER_PAGE.NAME" | translate }}' {{ "VALIDATIONS.REQUIRED" | translate }}.</span>
+    <div *ngIf="registerForm.get('name').errors">
+      <div *ngFor="let serverSideError of registerForm.get('name').errors['serverSide']">
+        <span class="validation-error"
+          [hidden]="!submit || !registerForm.get('name').hasError('serverSide')">{{serverSideError}}</span><br />
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">{{ "REGISTER_PAGE.LASTNAME" | translate }}</ion-label>
+      <ion-input formControlName="lastName"></ion-input>
+    </ion-item>
+    <span class="validation-error" [hidden]="!submit || !registerForm.get('lastName').hasError('required')">'{{ "REGISTER_PAGE.LASTNAME" | translate }}'
+      is a required field.</span>
+    <div *ngIf="registerForm.get('lastName').errors">
+      <div *ngFor="let serverSideError of registerForm.get('lastName').errors['serverSide']">
+        <span class="validation-error"
+          [hidden]="!submit || !registerForm.get('lastName').hasError('serverSide')">{{serverSideError}}</span><br />
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">{{ "REGISTER_PAGE.EMAIL" | translate }}</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+    <span class="validation-error" [hidden]="!submit || !registerForm.get('email').hasError('required')">'{{ "REGISTER_PAGE.EMAIL" | translate }}' {{ "VALIDATIONS.REQUIRED" | translate }}.</span>
+    <span class="validation-error" [hidden]="!submit || !registerForm.get('email').hasError('email')">'{{ "REGISTER_PAGE.EMAIL" | translate }}' hasn't the correct format.</span>
+    <div *ngIf="registerForm.get('email').errors">
+      <div *ngFor="let serverSideError of registerForm.get('email').errors['serverSide']">
+        <span class="validation-error"
+          [hidden]="!submit || !registerForm.get('email').hasError('serverSide')">{{serverSideError}}</span><br />
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">{{ "REGISTER_PAGE.PASSWORD" | translate }}</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <span class="validation-error" [hidden]="!submit || !registerForm.get('password').hasError('required')">'{{ "REGISTER_PAGE.PASSWORD" | translate }}' {{ "VALIDATIONS.REQUIRED" | translate }}.</span><br>
+    <span class="validation-error" [hidden]="!submit || !registerForm.get('password').hasError('pattern')">'{{ "REGISTER_PAGE.PASSWORD" | translate }}' {{ "VALIDATIONS.PASSWORD_REQUIREMENTS" | translate }}.</span>
+    <div *ngIf="registerForm.get('password').errors">
+      <div *ngFor="let serverSideError of registerForm.get('password').errors['serverSide']">
+        <span class="validation-error"
+          [hidden]="!submit || !registerForm.get('password').hasError('serverSide')">{{serverSideError}}</span><br />
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">{{ "REGISTER_PAGE.CONFIRM_PASSWORD" | translate }}</ion-label>
+      <ion-input type="password" formControlName="confirmPassword"></ion-input>
+    </ion-item>
+    <span class="validation-error"
+      [hidden]="!submit || !registerForm.get('confirmPassword').hasError('required')">'{{ "REGISTER_PAGE.CONFIRM_PASSWORD" | translate }}' {{ "VALIDATIONS.REQUIRED" | translate }}.</span><br>
+    <span class="validation-error"
+      [hidden]="!submit || !registerForm.get('confirmPassword').hasError('pattern')">'{{ "REGISTER_PAGE.CONFIRM_PASSWORD" | translate }}' {{ "VALIDATIONS.PASSWORD_REQUIREMENTS" | translate }}.</span>
+
+    <ion-button expand="full" type="submit">{{ "REGISTER_PAGE.REGISTER" | translate }}</ion-button>
+    <span class="validation-error" [hidden]="!submit || !registerForm.hasError('differentPasswords')">{{ "VALIDATIONS.PASSWORDS_MATCHING" | translate }}.</span>
+  </form>
+</ion-content>

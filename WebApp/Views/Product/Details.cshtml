@@ -1,0 +1,50 @@
+@model WebApp.Models.ProductViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Product.Details
+@inject IStringLocalizer<SharedResources> localizer
+
+<ignite-input for-property="Name" disabled></ignite-input>
+<ignite-textarea for-property="Description" disabled></ignite-textarea>
+<ignite-input for-property="Price" disabled></ignite-input>
+<ignite-date-picker for-property="ReleaseDate" disabled></ignite-date-picker>
+
+@{
+    if(!string.IsNullOrEmpty(Model.Category)) 
+	{
+		<ignite-input for-property="Category" disabled></ignite-input>
+    }
+
+    if(Model.Editors != null & Model.Editors.Any()) 
+	{
+		<ignite-dropdown for-property="EditorsIds" multiple="true" items="@Model.Editors" disabled></ignite-dropdown>
+    }
+}
+
+@{
+    if(Model.Features != null && Model.Features.Any()) {
+        <table id="feature-details" class="table w-100">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 0;
+                    foreach (var feature in Model.Features)
+                    {
+                        @await Component.InvokeAsync("FeatureRow", new { index = i, model = Model, editable = false });
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    }
+}
+
+<button type="button" class="btn btn-secondary mr-2" 
+        onclick="window.location.href='@Url.Action("Index","Product")'">@(localizer[Lang.BtnBack])</button>

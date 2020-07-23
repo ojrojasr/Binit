@@ -1,0 +1,79 @@
+@using Microsoft.AspNetCore.Identity
+@using Domain.Entities.Model
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@inject Domain.Logic.Interfaces.IAccountService AccountService
+@inject Microsoft.Extensions.Configuration.IConfiguration configuration
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Shared._LoginPartial
+@inject IStringLocalizer<SharedResources> localizer
+
+@{
+	var user = await AccountService.GetUserFull();	
+}
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <!-- User profile and search -->
+    <ul class="navbar-nav my-lg-0 d-flex.no-block align-items-center">
+
+        <!-- Profile -->
+        <li class="nav-item dropdown u-pro">
+            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				@if (user != null && user.PhotoId.HasValue) 
+                {
+					<img src="/File/Display/@user.PhotoId.ToString()" alt="user" class="" /> 
+				} 
+                else 
+                {
+					<img src="~/images/users/user-placeholder.png" alt="user" class="" /> 
+				}
+				<span class="hidden-md-down">@UserManager.GetUserName(User) &nbsp;<i class="fa fa-angle-down"></i></span> 
+			</a>
+            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                <ul class="dropdown-user">
+                    <li>
+                        <div class="dw-user-box">
+                            <div class="u-img">
+								@if(user.PhotoId.HasValue) {
+									<img src="/File/Display/@user.PhotoId.ToString()" alt="user" /> 
+								} else {
+									<img src="~/images/users/user-placeholder.png" alt="user">
+								}
+							</div>
+                            <div class="u-text m-t-10">
+                                <h4>@UserManager.GetUserName(User)</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li><a asp-area="Identity" asp-page="/Account/Manage/Index"><i class="ti-settings"></i> @(localizer[Lang.BtnAccount])</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                            <a href="#" onclick="document.getElementById('logoutForm').submit();"><i class="fa fa-power-off"></i> @(localizer[Lang.BtnLogout])</a>
+                        </form>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                </ul>
+                <p class="account-dropdown-footer">
+                    &copy;@configuration.GetSection("Version").Value - @DateTime.Now.Year - @configuration.GetSection("General")["SystemName"] - <a asp-area="" asp-controller="Home" asp-action="Privacy">@(localizer[Lang.Privacy])</a>
+                </p>
+            </div>
+        </li>
+    </ul>
+}
+else
+{
+    <li class="nav-item mr-2">
+        <a class="btn btn-rounded btn-warning" id="register" asp-area="Identity" asp-page="/Account/Register">@(localizer[Lang.BtnRegister])</a>
+    </li>
+    <li class="nav-item mr-2">
+        <a class="btn btn-rounded btn-secondary" id="login" asp-area="Identity" asp-page="/Account/Login">@(localizer[Lang.BtnLogin])</a>
+    </li>
+}
+</ul>
+

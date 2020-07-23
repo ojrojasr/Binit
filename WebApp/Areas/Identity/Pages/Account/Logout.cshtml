@@ -1,0 +1,12 @@
+﻿@page
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.Logout
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@model LogoutModel
+@{
+    ViewData["Title"] = localizer[Lang.Title];
+}
+
+<header>
+    <h1>@ViewData["Title"]</h1>
+    <p>@localizer[Lang.Subtitle]</p>
+</header>

@@ -1,0 +1,68 @@
+@model WebApp.Models.GameViewModel;
+
+@using Binit.Framework
+@using Microsoft.Extensions.Localization
+
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Game.Result
+@inject IStringLocalizer<SharedResources> localizer
+
+
+<div class="col-md-12">
+    <h2>@Model.UserName</h2>
+</div>
+<div>
+    <h4>Contentaste @Model.QuestionCorrect de @Model.QuestionQuantity bien de @Model.Theme</h4>
+    <br />
+</div>
+<div class="text-center">
+    @{
+        foreach (var question in Model.Questions)
+        {
+        <div style="border-radius: 10px 10px; margin:auto;background-color:@question.Color; padding: 10px;" class="col-md-6">
+            <h5 style="color:white">@question.Name</h5>
+        </div>
+        <br />
+            foreach (var answer in question.Answers)
+            {
+                if (answer.IsCorrect)
+                {
+                    <div>
+                        <button class="col-md-4 btn btn-success answer_btn">
+                            @answer.Name
+                        </button>
+                    </div>
+                    <br />
+                }
+                else if (Model.AnswersSelected.Contains(answer.Id))
+                {
+                    <div>
+                        <button class="col-md-4 btn btn-danger answer_btn">
+                            @answer.Name
+                        </button>
+                    </div>
+                    <br />
+                }
+                else
+                {
+                    <div>
+                        <button class="col-md-4 btn btn-light answer_btn" style="border-color:@question.Color">
+                            @answer.Name
+                        </button>
+                    </div>
+                    <br />
+                }
+
+            }
+
+            <br />
+        }
+    }
+</div>
+<div class="text-right">
+    <button class="offset-10 col-md-2 rainbow-button btn" alt="@(localizer[Lang.Done])"
+            onclick="window.location.href='@Url.Action("Index","Game")'">
+    </button>
+</div>
+
+
+<link href="~/css/colors/rainbow.css" rel="stylesheet" />

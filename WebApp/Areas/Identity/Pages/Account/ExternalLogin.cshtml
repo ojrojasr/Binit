@@ -1,0 +1,77 @@
+﻿@page
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.ExternalLogin;
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@model ExternalLoginModel
+@{
+    ViewData["Title"] = localizer[Lang.Title];
+    ViewData["Subtitle"] = string.Format(localizer[Lang.Subtitle], @Model.LoginProvider);
+    var info = string.Format(localizer[Lang.Info],@Model.LoginProvider);
+    Layout = "/Views/Shared/_ExternalLayout.cshtml";
+}
+
+<section id="wrapper">
+    <div id="external-login-container" class="login-register" style="background-image:url('@Url.Content("~/images/bg-register.jpg")');">
+        <div class="login-box card">
+            <div class="card-body text-center">
+				<form asp-page-handler="Confirmation" asp-route-returnUrl="@Model.ReturnUrl" method="post"
+						class="floating-labels">
+
+					<input type="hidden" asp-for="Input.AllowSetEmail" class="form-control" />	
+					<input type="hidden" asp-for="Input.AccountExists" class="form-control" />	
+
+					<a href="javascript:void(0)" class="text-center db">
+						<img src="~/images/logo-black.png" class="mb-4" width="200" alt="Home" />
+					</a>
+					<h1 class="box-title">@ViewData["Title"]</h1>
+					<small>@ViewData["Subtitle"]</small>
+					<div asp-validation-summary="All" class="text-danger text-left"></div>
+					<p class="text-info mt-4">@info</p>
+
+					@if (!Model.Input.AccountExists)
+					{
+						<div class="form-group m-t-40 text-left">
+							<input asp-for="Input.Name" class="form-control" />
+							<span class="bar"></span>
+							<label asp-for="Input.Name"></label>
+							<span asp-validation-for="Input.Name" class="text-danger"></span>
+						</div>
+
+						<div class="form-group m-t-40 text-left">
+							<input asp-for="Input.LastName" class="form-control" />
+							<span class="bar"></span>
+							<label asp-for="Input.LastName"></label>
+							<span asp-validation-for="Input.LastName" class="text-danger"></span>
+						</div>
+					}
+					else
+					{
+						<input type="hidden" asp-for="Input.Name" class="form-control" />	
+						<input type="hidden" asp-for="Input.LastName" class="form-control" />	
+						<span>@(localizer[Lang.AccountExistsMessage])</span>
+					}
+
+					<div class="form-group m-t-40 text-left">
+						@if (Model.Input.AllowSetEmail)
+						{
+							<input asp-for="Input.Email" class="form-control" />
+						}
+						else 
+						{
+							<input asp-for="Input.Email" disabled class="form-control" />	
+							<input type="hidden" asp-for="Input.Email" class="form-control" />	
+						}
+						<span class="bar"></span>
+						<label asp-for="Input.Email"></label>
+						<span asp-validation-for="Input.Email" class="text-danger"></span>
+					</div>
+					
+					<button type="submit" class="btn btn-primary">@(Model.Input.AccountExists ? localizer[Lang.AccountExistsBtn] : localizer[Lang.SubmitButton])</button>
+				</form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,53 @@
+@model WebApp.Models.QuestionViewModel;
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Views.Question.CreateOrEdit
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+
+@{
+    int i = (int)ViewData["Index"];
+    var editable = (bool)ViewData["Editable"];
+}
+
+    <tr id="answer-row-@i">
+        <input type="hidden" asp-for="@Model.Answers[i].Id" />
+        <td>
+            <div class="@(editable ? "form-group m-t-20" : "")" binit-validation-for="Answers[i].Name"
+                 binit-onerror-class="has-danger" binit-onsuccess-class="has-success">
+                <input disabled="@(editable ? null : "disabled")" type="text" asp-for="@Model.Answers[i].Name" class="form-control" />
+                @if (editable)
+                {
+                    <span class="bar"></span>
+                    <label asp-for="@Model.Answers[i].Name"></label>
+                    <span asp-validation-for="@Model.Answers[i].Name" class="form-control-feedback"></span>
+                }
+            </div>
+        </td>
+        <td>
+            <div class="@(editable ? "form-group m-t-20" : "")" binit-validation-for="Answers[i].IsCorrect"
+                 binit-onerror-class="has-danger" binit-onsuccess-class="has-success">
+                @if (editable)
+                {
+                    <span class="bar"></span>
+                    <input type="checkbox" asp-for="@Model.Answers[i].IsCorrect" class="form-control">
+                    <span asp-validation-for="@Model.Answers[i].IsCorrect" class="form-control-feedback"></span>
+                }
+            </div>
+        </td>
+        @if (editable)
+        {
+            <td class="actions">
+                <button type="button" onclick="borrar(@i)" class="btn waves-effect waves-light btn-danger btn-sm mr-2 delete-answer">
+                    <i class="fa fa-times"></i> @(localizer[Lang.BtnDeleteAnswer])
+                </button>
+            </td>
+
+           
+        }
+    </tr>
+
+
+    <script>
+        function borrar(index) {
+            $('#answer-row-' + index).remove();
+            $('[name="Answers[' + index + '].IsCorrect"]').remove();
+        }
+    </script>

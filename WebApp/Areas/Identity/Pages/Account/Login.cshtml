@@ -1,0 +1,117 @@
+﻿@page
+@model LoginModel
+@using Lang = Binit.Framework.Localization.LocalizationConstants.WebApp.Areas.Identity.Pages.Account.Login
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Binit.Framework.SharedResources> localizer
+@inject Binit.Framework.Interfaces.Configuration.IRealmConfiguration realmConfig
+@{
+    ViewData["Title"] = @localizer[Lang.Title];
+    Layout = "/Views/Shared/_ExternalLayout.cshtml";
+}
+
+
+<div id="login" class="vh-100">
+	<img class="bg" src="@Url.Content("~/images/bg-login.jpg")"/>
+	<div class="card-body">
+		<form id="account" method="post" class="floating-labels">
+			<a href="javascript:void(0)" class="text-center db">
+				<img src="~/images/logo-black.png" class="mb-5" width="200" alt="Home" />
+			</a>
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group m-b-40">
+				<div class="col-xs-12">
+					<input asp-for="Input.Email" class="form-control" type="text" required>
+					<span class="bar"></span>
+					<label asp-for="Input.Email"></label>
+					<span asp-validation-for="Input.Email" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-12">
+					<input asp-for="Input.Password" class="form-control" type="password" required>
+					<span class="bar"></span>
+					<label asp-for="Input.Password"></label>
+					<span asp-validation-for="Input.Password" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-md-12">
+					<div class="checkbox checkbox-primary pull-left p-t-0 d-flex align-items-center mb-4">
+						<input asp-for="Input.RememberMe" id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue mr-2">
+						<label for="checkbox-signup"> @localizer[Lang.RememberMe] </label>
+					</div>
+					<a asp-page="./ForgotPassword" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> @localizer[Lang.ForgotPassword]</a>
+				</div>
+			</div>
+			<div class="form-group text-center m-t-20">
+				<div class="col-xs-12">
+					<button class="btn btn-themecolor btn-lg btn-block text-uppercase btn-rounded" type="submit">@localizer[Lang.SubmitButton]</button>
+				</div>
+			</div>
+			@*<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+					<div class="social">
+					</div>
+				</div>
+			</div>*@
+
+			@if (realmConfig.AllowSelfSignUp)
+			{
+				<div class="form-group m-b-0">
+					<div class="col-sm-12 text-center">
+						@localizer[Lang.NoAccount] <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="text-primary m-l-5"><b>@localizer[Lang.SignUp]</b></a>
+					</div>
+				</div>
+			}
+		</form>
+
+		@{
+			if ((Model.ExternalLogins?.Count ?? 0) != 0)
+			{
+				<form id="external-account" class="text-center" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+					<div class="social">
+						<p>
+							@foreach (var provider in Model.ExternalLogins)
+							{
+								switch (provider.Name)
+								{
+									case "Google":
+										<text>
+											<button type="submit" href="javascript:void(0)" name="provider" value="@provider.Name" class="btn btn-googleplus" data-toggle="tooltip" title="@localizer[Lang.WithGoogle]">
+												<i aria-hidden="true" class="fab fa-google-plus-g"></i>
+											</button>
+										</text>
+										break;
+									case "Facebook":
+										<text>
+											<button type="submit" href="javascript:void(0)"  name="provider" value="@provider.Name" class="btn btn-facebook" data-toggle="tooltip" title="@localizer[Lang.WithFacebook]">
+												<i aria-hidden="true" class="fab fa-facebook"></i>
+											</button>
+										</text>
+										break;
+									case "Twitter":
+										<text>
+											<button type="submit" href="javascript:void(0)" name="provider" value="@provider.Name" class="btn btn-twitter" data-toggle="tooltip" title="@localizer[Lang.WithTwitter]">
+												<i aria-hidden="true" class="fab fa-twitter"></i>
+											</button>
+										</text>            
+										break;
+									default:
+										<text>
+											<button type="submit" href="javascript:void(0)" name="provider" value="@provider.Name" class="btn btn-primary" data-toggle="tooltip" title="@(string.Format(localizer[Lang.WithAny], @provider.DisplayName))">
+												@provider.DisplayName
+											</button>
+										</text>            
+										break;
+								}
+							}
+						</p>
+					</div>
+				</form>
+			}
+		}
+	</div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
